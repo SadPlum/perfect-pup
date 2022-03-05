@@ -48,10 +48,10 @@ const Header = () => {
           <PetsIcon sx={{ fontSize: 50 }} />
         </a>
       </div>
-      <div className={styles.title}>
+      <summary className={styles.title}>
         <h1 className={styles.text}>Perfect Pup</h1>
         <h6 className={styles.text}>Find your new best friend</h6>
-      </div>
+      </summary>
     </header>
   );
 };
