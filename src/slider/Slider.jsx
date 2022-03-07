@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@mui/styles";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import IconButton from "@mui/material/IconButton";
 
 const Slider = () => {
   const [dogs, setDogs] = useState(null);
@@ -42,16 +45,25 @@ const Slider = () => {
     },
     buttonLeft: {
       position: "absolute",
-      top: "217px",
+      top: "214px",
       height: "26px",
       width: "26px",
+      left: "15px",
+      color: "black",
+      backgroundColor: "rgba(255, 255, 255, 0.6)",
+      "&:focus": {
+        background: "rgba(0, 0, 0, 0.54)",
+      },
     },
     buttonRight: {
       position: "absolute",
       height: "26px",
       width: "26px",
-      left: "614px",
+      left: "599px",
       top: "214px",
+      "&:focus": {
+        background: "rgba(0, 0, 0, 0.54)",
+      },
     },
   });
 
@@ -75,13 +87,27 @@ const Slider = () => {
           {/* dogs found from api */}
           {dogs && (
             <section className={styles.carousel}>
-              <button className={styles.buttonLeft} onClick={previousSlide}>
-                left
-              </button>
-              <img className={styles.dogImage} src={dogs[slider]}></img>
-              <button className={styles.buttonRight} onClick={nextSlide}>
-                right
-              </button>
+              <IconButton
+                className={styles.buttonLeft}
+                onClick={previousSlide}
+                sx={{ position: "absolute" }}
+              >
+                <ArrowBackIosIcon sx={{ color: "black" }} />
+              </IconButton>
+
+              <img
+                className={styles.dogImage}
+                src={dogs[slider]}
+                alt="Pictures of Dogs"
+              ></img>
+
+              <IconButton
+                className={styles.buttonRight}
+                onClick={nextSlide}
+                sx={{ position: "absolute" }}
+              >
+                <ArrowForwardIosIcon sx={{ color: "black" }} />
+              </IconButton>
             </section>
           )}
         </div>
@@ -93,6 +119,7 @@ const Slider = () => {
             obcaecati possimus veniam corrupti porro consequuntur eaque
             dignissimos, nostrum quisquam sunt?
           </p>
+          <button>Random Pup</button>
         </aside>
       </section>
     </>
