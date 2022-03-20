@@ -1,0 +1,235 @@
+.dropdownContainer {
+  width: 100vw;
+  display: inline;
+  position: absolute;
+  background-color: #e2e2e2;
+  z-index: 10000;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  top: 75px;
+  left: 0px;
+}
+
+.dropdownContainer ul {
+  padding: 10px 10px;
+}
+
+.dropdownContainer ul li {
+  padding: 4px 10px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+.dropdownContainer ul li a {
+  color: black;
+}
+
+.dropdownContainer ul li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .dropdownContainer {
+    border-radius: 10px;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    width: 140px;
+    left: auto;
+    top: 60px;
+    right: 50px;
+  }
+}
+
+.header {
+  font-family: "Mulish", sans-serif;
+  height: 75px;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-weight: 400;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #832161;
+  margin: 0px;
+  position: relative;
+}
+
+.header .title-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  margin-left: 25px;
+}
+
+@media (min-width: 768px) {
+  .header .title-box {
+    margin-left: 100px;
+  }
+}
+
+@media (min-width: 500px) {
+  .header .title-box {
+    margin-left: 75px;
+  }
+}
+
+.header .title-box h1 {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.header .title-box h6 {
+  font-family: "Dancing Script", cursive;
+}
+
+.header .nav {
+  margin-right: 25px;
+}
+
+@media (min-width: 500px) {
+  .header .nav {
+    margin-right: 75px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header .nav {
+    margin-right: 100px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header .nav-button {
+    display: none;
+  }
+}
+
+.header .nav-bar {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header .nav-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.header .tab {
+  margin-left: 25px;
+  text-align: center;
+}
+
+.header .tab-active {
+  background-color: #963876;
+  padding: 10px 15px;
+  margin: 0 -15px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.main {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 90%;
+  margin: auto;
+  height: 480px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.dog-image {
+  height: 480px;
+  width: 640px;
+}
+
+.text-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  height: 480px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #e6b54d;
+}
+
+.button-left {
+  position: absolute;
+  top: 214px;
+  height: 26px;
+  width: 26px;
+  left: 15px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.button-left:focus {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.button-left:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.button-right {
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  left: 599px;
+  top: 214px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.button-right:focus {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.button-right:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+/*# sourceMappingURL=Styles.css.map */
