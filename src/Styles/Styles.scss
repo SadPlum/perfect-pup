@@ -3,3 +3,8 @@
 @import "header";
 @import "slider";
 @import "home";
+@import "about";
+
+body {
+  background-color: $light-color;
+}

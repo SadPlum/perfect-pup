@@ -85,10 +85,11 @@
 .text-box {
   display: flex;
   flex-direction: column;
+  font-family: $parag-font;
   text-align: center;
   justify-content: center;
   align-items: center;
-  background-color: #e2c88f;
+  background-color: $light-color;
   height: 100%;
   .text-box-title {
     font-weight: 500;
@@ -105,6 +106,8 @@
   }
   .text-box-parag {
     width: 80%;
+
+    font-weight: 300;
     margin-bottom: 20px;
     @media (min-width: $lg) {
       font-size: 1.2rem;
@@ -112,9 +115,15 @@
     }
   }
   .random-btn {
-    background: #e4dbc7;
+    background: $dark-color-highlight;
     padding: 10px 15px;
-    border-radius: 15px;
-    border: 2px solid #8d6c25;
+    border-radius: 1px;
+    font-size: 1.2rem;
+    &:hover {
+      background: $dark-color;
+    }
+    &:focus {
+      background: $dark-color;
+    }
   }
 }

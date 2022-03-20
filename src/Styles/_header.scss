@@ -3,6 +3,7 @@
 .header {
   font-family: $main-font;
   position: sticky;
+  color: #f0ecec;
   height: 75px;
   width: 100vw;
   display: flex;
@@ -48,6 +49,10 @@
   }
 
   .nav-button {
+    color: $light-color;
+    &:focus {
+      background-color: $dark-color-highlight;
+    }
     @media (min-width: $md) {
       display: none;
     }
@@ -68,9 +73,12 @@
 
     text-align: center;
   }
+  .nav-link {
+    color: $light-color;
+  }
 
   .tab-active {
-    background-color: #963876;
+    background-color: $dark-color-highlight;
     padding: 10px 15px;
     margin: 0 -15px;
     border-radius: 20px;

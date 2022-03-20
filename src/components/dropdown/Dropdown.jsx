@@ -16,30 +16,30 @@ const Dropdown = ({ stateChange }) => {
         <ul className="dropdown">
           <li className="list-item" onClick={close}>
             {" "}
-            <Link to="/" className="nav-link">
+            <Link to="/" className="nav-link-tab">
               Home
             </Link>
           </li>
           <li className="list-item" onClick={close}>
             {" "}
-            <Link to="/search" className="nav-link">
+            <Link to="/search" className="nav-link-tab">
               Search
             </Link>
           </li>
           <li className="list-item" onClick={close}>
             {" "}
-            <Link to="/about" className="nav-link">
+            <Link to="/about" className="nav-link-tab">
               About
             </Link>
           </li>
           <li className="list-item" onClick={close}>
-            <Link to="/tips" className="nav-link">
+            <Link to="/tips" className="nav-link-tab">
               Tips
             </Link>
           </li>
           <li className="list-item" onClick={close}>
             {" "}
-            <Link to="/contact" className="nav-link">
+            <Link to="/contact" className="nav-link-tab">
               Contact
             </Link>
           </li>

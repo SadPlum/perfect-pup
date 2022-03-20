@@ -2,7 +2,12 @@
   .slider {
     display: none;
     @media (min-width: $sm) {
+      align-self: center;
       display: block;
+      margin: auto;
+    }
+    @media (min-width: 1960px) {
+      width: 1960px;
     }
   }
 }
