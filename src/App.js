@@ -10,7 +10,7 @@ import Home from "./home/Home";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -21,7 +21,7 @@ function App() {
         <Route path="/about"></Route>
         <Route path="/tips"></Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
