@@ -1,0 +1,78 @@
+.footer {
+  height: 300px;
+  margin-top: 20px;
+  width: 100%;
+  background-color: $off-black;
+  position: absolute;
+  bottom: 0;
+  color: $light-color;
+  @media (min-width: $md) {
+    height: 175px;
+  }
+  .footer-group {
+    @media (min-width: $md) {
+      width: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .footer-info {
+    .footer-title {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    .footer-contact {
+      font-size: 0.8rem;
+      margin-bottom: 20px;
+    }
+  }
+
+  .social {
+    color: $light-color;
+    .footer-icon {
+      fill: $light-color;
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+    }
+    @media (min-width: $md) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    .footer-link-a {
+      color: $light-color;
+      padding: 3px 0;
+    }
+  }
+
+  .author {
+    width: 100%;
+    margin-left: -15px;
+    text-align: center;
+    margin-top: 5px;
+    .footer-text {
+      font-size: 0.9rem;
+    }
+    .footer-github {
+      color: $light-color;
+      font-size: 0.8rem;
+    }
+  }
+  .footer-content {
+    padding: 10px 15px;
+    @media (min-width: $md) {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  }
+}

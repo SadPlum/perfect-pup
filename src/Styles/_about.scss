@@ -1,13 +1,23 @@
 .about {
   text-align: center;
   font-family: $parag-font;
+  @media (min-width: $lg) {
+    padding-bottom: 20px;
+  }
+
   //   IMAGE
   .large-dog-img {
     width: 100%;
     margin-bottom: 20px;
+    @media (min-width: $md) {
+      height: 500px;
+      object-fit: cover;
+    }
   }
   // TEXT AREA
   .about-section {
+    max-width: $lg;
+    margin: auto;
     .about-main {
       width: 80%;
       margin: auto;
@@ -43,6 +53,8 @@
         margin-bottom: 20px;
       }
       .about-values {
+        width: 100%;
+        margin: auto;
         .about-sub {
           .about-sub-title {
             font-size: 1.4rem;

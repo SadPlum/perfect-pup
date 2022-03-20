@@ -4,7 +4,19 @@
 @import "slider";
 @import "home";
 @import "about";
-
+@import "footer";
 body {
   background-color: $light-color;
+  font-family: $parag-font;
+  height: 100%;
+}
+.container {
+  position: relative;
+  min-height: 100vh;
+}
+.wrap {
+  padding-bottom: 300px;
+  @media (min-width: 768px) {
+    padding-bottom: 175px;
+  }
 }
