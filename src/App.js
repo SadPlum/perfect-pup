@@ -4,6 +4,7 @@ import {
   BrowserRouter as BrowserRouter,
   Routes,
   Route,
+  HashRouter as HashRouter,
 } from "react-router-dom";
 import Header from "./components/header/Header";
 import Home from "./home/Home";
