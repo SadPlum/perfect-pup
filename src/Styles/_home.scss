@@ -1,0 +1,8 @@
+.home-body {
+  .slider {
+    display: none;
+    @media (min-width: $sm) {
+      display: block;
+    }
+  }
+}

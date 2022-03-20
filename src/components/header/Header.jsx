@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useEffect, useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import IconButton from "@mui/material/IconButton";
-import PetsIcon from "@mui/icons-material/Pets";
 import "../../Styles/Styles.css";
 import Dropdown from "../dropdown/Dropdown";
 
 const Header = () => {
   const [drop, setDrop] = useState(false);
+
   const handleClick = () => {
     setDrop(!drop);
   };
@@ -16,6 +16,19 @@ const Header = () => {
   const handleTab = (i) => {
     setActive(i);
   };
+  const dropdownRef = useRef();
+  const buttonRef = useRef();
+
+  useEffect(() => {
+    document.body.addEventListener("click", (e) => {
+      if (dropdownRef.current.contains(e.target)) {
+        return;
+      } else if (buttonRef.current.contains(e.target)) {
+        return;
+      }
+      setDrop(false);
+    });
+  }, []);
 
   const tags = [`Home`, `Search`, `About`, `Tips`, `Contact`];
 
@@ -28,16 +41,18 @@ const Header = () => {
 
       <nav className="nav">
         {/* for mobile */}
-        <div className="nav-button">
+        <div className="nav-button" ref={buttonRef}>
           <IconButton onClick={handleClick}>
             <MenuIcon />
           </IconButton>
         </div>
+        <div ref={dropdownRef}>
+          {drop && <Dropdown stateChange={setDrop} />}
+        </div>
 
-        {drop && <Dropdown />}
         {/* for tablet and destop */}
         <div className="nav-bar">
-          <tab className="tab">
+          <div className="tab">
             <div className={active === 0 ? "tab-active" : ""}>
               <Link
                 to="/home"
@@ -49,8 +64,8 @@ const Header = () => {
                 Home
               </Link>
             </div>
-          </tab>
-          <tab className="tab">
+          </div>
+          <div className="tab">
             <div className={active === 1 ? "tab-active" : ""}>
               <Link
                 to="/search"
@@ -62,8 +77,8 @@ const Header = () => {
                 Search
               </Link>
             </div>
-          </tab>
-          <tab className="tab">
+          </div>
+          <div className="tab">
             <div className={active === 2 ? "tab-active" : ""}>
               <Link
                 to="/about"
@@ -75,8 +90,8 @@ const Header = () => {
                 About
               </Link>
             </div>
-          </tab>
-          <tab className="tab">
+          </div>
+          <div className="tab">
             <div className={active === 3 ? "tab-active" : ""}>
               <Link
                 to="/tips"
@@ -88,8 +103,8 @@ const Header = () => {
                 Tips
               </Link>
             </div>
-          </tab>
-          <tab className="tab">
+          </div>
+          <div className="tab">
             <div className={active === 4 ? "tab-active" : ""}>
               <Link
                 to="/contact"
@@ -101,7 +116,7 @@ const Header = () => {
                 Contact
               </Link>
             </div>
-          </tab>
+          </div>
         </div>
       </nav>
     </header>

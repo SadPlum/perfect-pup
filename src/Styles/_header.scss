@@ -20,10 +20,10 @@
     align-items: center;
     height: 100%;
     margin-left: 25px;
-    @media (min-width: 768px) {
+    @media (min-width: $md) {
       margin-left: 100px;
     }
-    @media (min-width: 500px) {
+    @media (min-width: $sm) {
       margin-left: 75px;
     }
 
@@ -38,16 +38,16 @@
 
   .nav {
     margin-right: 25px;
-    @media (min-width: 500px) {
+    @media (min-width: $sm) {
       margin-right: 75px;
     }
-    @media (min-width: 768px) {
+    @media (min-width: $md) {
       margin-right: 100px;
     }
   }
 
   .nav-button {
-    @media (min-width: 768px) {
+    @media (min-width: $md) {
       display: none;
     }
   }
@@ -55,7 +55,7 @@
   .nav-bar {
     display: none;
 
-    @media (min-width: 768px) {
+    @media (min-width: $md) {
       display: flex;
       justify-content: center;
       align-items: center;

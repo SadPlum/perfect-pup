@@ -4,8 +4,6 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import IconButton from "@mui/material/IconButton";
 
 const Slider = () => {
-  // const [dogs, setDogs] = useState(null);
-
   const [slider, setSlider] = useState(0);
 
   const dogs = [
@@ -24,7 +22,7 @@ const Slider = () => {
   };
   return (
     <>
-      <section className="main">
+      <section className="slider-body">
         <div style={{ height: 480 }}>
           <section className="carousel">
             <IconButton

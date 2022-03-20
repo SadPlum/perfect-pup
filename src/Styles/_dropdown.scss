@@ -1,5 +1,5 @@
 .dropdownContainer {
-  width: 100vw;
+  width: 100%;
   display: inline;
   position: absolute;
   background-color: rgb(226, 226, 226);
@@ -25,13 +25,21 @@
       margin-bottom: 0;
     }
   }
+  .nav-link {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+  }
 
-  @media (min-width: 768px) {
+  @media (min-width: $sm) {
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
     width: 140px;
     left: auto;
     top: 60px;
-    right: 50px;
+    right: 25px;
+  }
+  @media (min-width: $md) {
+    display: none;
   }
 }
