@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/perfect-pup/static/css/main.f2505a3a.css",
-    "main.js": "/perfect-pup/static/js/main.2b4796f9.js",
+    "main.js": "/perfect-pup/static/js/main.b337dd12.js",
     "index.html": "/perfect-pup/index.html",
     "static/media/arrow-left-solid.svg": "/perfect-pup/static/media/arrow-left-solid.f9e7e162eb605191136a924308f8678e.svg",
     "static/media/arrow-right-solid.svg": "/perfect-pup/static/media/arrow-right-solid.879db0ca7b28ab3fa4af22ab06af0361.svg",
     "main.f2505a3a.css.map": "/perfect-pup/static/css/main.f2505a3a.css.map",
-    "main.2b4796f9.js.map": "/perfect-pup/static/js/main.2b4796f9.js.map"
+    "main.b337dd12.js.map": "/perfect-pup/static/js/main.b337dd12.js.map"
   },
   "entrypoints": [
     "static/css/main.f2505a3a.css",
-    "static/js/main.2b4796f9.js"
+    "static/js/main.b337dd12.js"
   ]
 }
