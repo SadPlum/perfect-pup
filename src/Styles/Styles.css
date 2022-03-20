@@ -1,0 +1,345 @@
+.dropdownContainer {
+  width: 100%;
+  display: inline;
+  position: absolute;
+  background-color: #e2e2e2;
+  z-index: 10000;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  top: 75px;
+  left: 0px;
+}
+
+.dropdownContainer ul {
+  padding: 10px 10px;
+}
+
+.dropdownContainer ul li {
+  padding: 4px 10px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+.dropdownContainer ul li a {
+  color: black;
+}
+
+.dropdownContainer ul li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.dropdownContainer .nav-link {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+@media (min-width: 500px) {
+  .dropdownContainer {
+    border-radius: 10px;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    width: 140px;
+    left: auto;
+    top: 60px;
+    right: 25px;
+  }
+}
+
+@media (min-width: 768px) {
+  .dropdownContainer {
+    display: none;
+  }
+}
+
+.header {
+  font-family: "Mulish", sans-serif;
+  position: -webkit-sticky;
+  position: sticky;
+  height: 75px;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-weight: 400;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #832161;
+  margin: 0px;
+  position: relative;
+}
+
+.header .title-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  margin-left: 25px;
+}
+
+@media (min-width: 768px) {
+  .header .title-box {
+    margin-left: 100px;
+  }
+}
+
+@media (min-width: 500px) {
+  .header .title-box {
+    margin-left: 75px;
+  }
+}
+
+.header .title-box h1 {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.header .title-box h6 {
+  font-family: "Dancing Script", cursive;
+}
+
+.header .nav {
+  margin-right: 25px;
+}
+
+@media (min-width: 500px) {
+  .header .nav {
+    margin-right: 75px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header .nav {
+    margin-right: 100px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header .nav-button {
+    display: none;
+  }
+}
+
+.header .nav-bar {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header .nav-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.header .tab {
+  margin-left: 25px;
+  text-align: center;
+}
+
+.header .tab-active {
+  background-color: #963876;
+  padding: 10px 15px;
+  margin: 0 -15px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.slider-body {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin: auto;
+  height: 600px;
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .slider-body {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 480px;
+  }
+}
+
+.slider-body .carousel {
+  height: 400px;
+}
+
+.dog-image {
+  height: 400px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 100% 20%;
+     object-position: 100% 20%;
+}
+
+@media (min-width: 1024px) {
+  .dog-image {
+    width: 700px;
+    height: 480px;
+  }
+}
+
+.slider-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0px;
+}
+
+.slider-button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.slider-button:focus {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.button-left {
+  position: absolute;
+  top: 214px;
+  height: 26px;
+  width: 26px;
+  padding: 0px;
+  left: 20px;
+}
+
+.button-right {
+  position: absolute;
+  top: 214px;
+  padding: 0px;
+  height: 26px;
+  width: 26px;
+}
+
+@media (min-width: 500px) {
+  .button-right {
+    right: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .button-right {
+    right: 0px;
+    left: 645px;
+  }
+}
+
+.arrow-icon {
+  background-color: none;
+  height: 26px;
+  width: 26px;
+}
+
+.text-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #e2c88f;
+  height: 100%;
+}
+
+.text-box .text-box-title {
+  font-weight: 500;
+  width: 80%;
+  border-bottom: 2px solid black;
+  font-size: 1.4rem;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 1024px) {
+  .text-box .text-box-title {
+    padding-bottom: 40px;
+    margin-bottom: 60px;
+    font-size: 2rem;
+  }
+}
+
+.text-box .text-box-parag {
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 1024px) {
+  .text-box .text-box-parag {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+  }
+}
+
+.text-box .random-btn {
+  background: #e4dbc7;
+  padding: 10px 15px;
+  border-radius: 15px;
+  border: 2px solid #8d6c25;
+}
+
+.home-body .slider {
+  display: none;
+}
+
+@media (min-width: 500px) {
+  .home-body .slider {
+    display: block;
+  }
+}
+/*# sourceMappingURL=Styles.css.map */

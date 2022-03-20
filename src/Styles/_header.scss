@@ -1,0 +1,79 @@
+@import "variables";
+
+.header {
+  font-family: $main-font;
+  position: sticky;
+  height: 75px;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  font-weight: 400;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $dark-color;
+  margin: 0px;
+  position: relative;
+
+  .title-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-left: 25px;
+    @media (min-width: $md) {
+      margin-left: 100px;
+    }
+    @media (min-width: $sm) {
+      margin-left: 75px;
+    }
+
+    h1 {
+      font-weight: 500;
+      font-size: 2rem;
+    }
+    h6 {
+      font-family: $fancy-font;
+    }
+  }
+
+  .nav {
+    margin-right: 25px;
+    @media (min-width: $sm) {
+      margin-right: 75px;
+    }
+    @media (min-width: $md) {
+      margin-right: 100px;
+    }
+  }
+
+  .nav-button {
+    @media (min-width: $md) {
+      display: none;
+    }
+  }
+
+  .nav-bar {
+    display: none;
+
+    @media (min-width: $md) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .tab {
+    margin-left: 25px;
+
+    text-align: center;
+  }
+
+  .tab-active {
+    background-color: #963876;
+    padding: 10px 15px;
+    margin: 0 -15px;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+}
