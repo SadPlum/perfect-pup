@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import IconButton from "@mui/material/IconButton";
+import { ReactComponent as LeftArrow } from "../icons/arrow-left-solid.svg";
+import { ReactComponent as RightArrow } from "../icons/arrow-right-solid.svg";
 
 const Slider = () => {
   const [slider, setSlider] = useState(0);
@@ -23,40 +22,34 @@ const Slider = () => {
   return (
     <>
       <section className="slider-body">
-        <div style={{ height: 480 }}>
-          <section className="carousel">
-            <IconButton
-              className="button-left"
-              onClick={previousSlide}
-              sx={{ position: "absolute" }}
-            >
-              <ArrowBackIosIcon sx={{ color: "black" }} />
-            </IconButton>
+        <section className="carousel">
+          <button className="button-left" onClick={previousSlide}>
+            <div className="slider-button">
+              <LeftArrow className="arrow-icon" />
+            </div>
+          </button>
 
-            <img
-              className="dog-image"
-              src={dogs[slider]}
-              alt="Pictures of Dogs"
-            ></img>
+          <img
+            className="dog-image"
+            src={dogs[slider]}
+            alt="Pictures of Dogs"
+          ></img>
 
-            <IconButton
-              className="button-right"
-              onClick={nextSlide}
-              sx={{ position: "absolute" }}
-            >
-              <ArrowForwardIosIcon sx={{ color: "black" }} />
-            </IconButton>
-          </section>
-        </div>
+          <button className="button-right" onClick={nextSlide}>
+            <div className="slider-button">
+              <RightArrow className="arrow-icon" />
+            </div>
+          </button>
+        </section>
 
         <aside className="text-box">
-          <h2>Lorem, ipsum.</h2>
-          <p>
+          <h2 className="text-box-title">Lorem, ipsum.</h2>
+          <p className="text-box-parag">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
             obcaecati possimus veniam corrupti porro consequuntur eaque
             dignissimos, nostrum quisquam sunt?
           </p>
-          <button>Random Pup</button>
+          <button className="random-btn">Random Pup</button>
         </aside>
       </section>
     </>

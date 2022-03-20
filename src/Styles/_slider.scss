@@ -1,53 +1,120 @@
 .slider-body {
   position: relative;
   display: flex;
-  flex-direction: row;
-  width: 90%;
-  margin: auto;
-  height: 480px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.dog-image {
-  height: 480px;
-  width: 640px;
-}
-.text-box {
-  display: flex;
   flex-direction: column;
-  text-align: center;
-  height: 480px;
+  width: 100%;
+  margin: auto;
+  height: 600px;
+  overflow: hidden;
+
+  @media (min-width: $lg) {
+    flex-direction: row;
+    height: 480px;
+  }
+
+  .carousel {
+    height: 400px;
+  }
+}
+
+.random-btn {
+}
+
+.dog-image {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  object-position: 100% 20%;
+  @media (min-width: $lg) {
+    width: 700px;
+    height: 480px;
+  }
+}
+
+.slider-button {
+  display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #e6b54d;
+  color: black;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0px;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
 }
+
 .button-left {
   position: absolute;
   top: 214px;
   height: 26px;
   width: 26px;
-  left: 15px;
-  color: black;
-  background-color: rgba(255, 255, 255, 0.6);
-  &:focus {
-    background: rgba(0, 0, 0, 0.7);
-  }
-  &:hover {
-    background: rgba(0, 0, 0, 0.7);
-  }
+  padding: 0px;
+  left: 20px;
 }
+
 .button-right {
   position: absolute;
+  top: 214px;
+  padding: 0px;
   height: 26px;
   width: 26px;
-  left: 599px;
-  top: 214px;
-  color: black;
-  background-color: rgba(255, 255, 255, 0.6);
-  &:focus {
-    background: rgba(0, 0, 0, 0.7);
+
+  @media (min-width: $sm) {
+    right: 20px;
   }
-  &:hover {
-    background: rgba(0, 0, 0, 0.7);
+  @media (min-width: $md) {
+  }
+  @media (min-width: $lg) {
+    right: 0px;
+    left: 645px;
+  }
+}
+
+.arrow-icon {
+  background-color: none;
+  height: 26px;
+  width: 26px;
+}
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #e2c88f;
+  height: 100%;
+  .text-box-title {
+    font-weight: 500;
+    width: 80%;
+    border-bottom: 2px solid black;
+    font-size: 1.4rem;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    @media (min-width: $lg) {
+      padding-bottom: 40px;
+      margin-bottom: 60px;
+      font-size: 2rem;
+    }
+  }
+  .text-box-parag {
+    width: 80%;
+    margin-bottom: 20px;
+    @media (min-width: $lg) {
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+    }
+  }
+  .random-btn {
+    background: #e4dbc7;
+    padding: 10px 15px;
+    border-radius: 15px;
+    border: 2px solid #8d6c25;
   }
 }
