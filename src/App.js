@@ -4,14 +4,13 @@ import {
   BrowserRouter as BrowserRouter,
   Routes,
   Route,
-  HashRouter as HashRouter,
 } from "react-router-dom";
 import Header from "./components/header/Header";
 import Home from "./home/Home";
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -22,7 +21,7 @@ function App() {
         <Route path="/about"></Route>
         <Route path="/tips"></Route>
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
