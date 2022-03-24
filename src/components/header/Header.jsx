@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import IconButton from "@mui/material/IconButton";
-import "../../Styles/Styles.css";
 import Dropdown from "../dropdown/Dropdown";
 
 const Header = () => {
@@ -19,9 +18,21 @@ const Header = () => {
   const dropdownRef = useRef();
   const buttonRef = useRef();
 
+  // useEffect(() => {
+  //   document.body.addEventListener("click", (e) => {
+  //     console.log(dropdownRef.current);
+  //     console.log(e.target);
+  //     if (dropdownRef.current.contains(e.target)) {
+  //       return;
+  //     } else if (buttonRef.current.contains(e.target)) {
+  //       return;
+  //     }
+  //     setDrop(false);
+  //   });
+  // }, []);
   useEffect(() => {
     document.body.addEventListener("click", (e) => {
-      if (dropdownRef.current.contains(e.target)) {
+      if (drop && dropdownRef.current.contains(e.target)) {
         return;
       } else if (buttonRef.current.contains(e.target)) {
         return;
@@ -43,12 +54,14 @@ const Header = () => {
         {/* for mobile */}
         <div className="nav-button" ref={buttonRef}>
           <IconButton onClick={handleClick}>
-            <MenuIcon />
+            <MenuIcon sx={{ color: "#f0ecec" }} />
           </IconButton>
         </div>
-        <div ref={dropdownRef}>
-          {drop && <Dropdown stateChange={setDrop} />}
-        </div>
+        {drop && (
+          <div ref={dropdownRef}>
+            <Dropdown stateChange={setDrop} />
+          </div>
+        )}
 
         {/* for tablet and destop */}
         <div className="nav-bar">
