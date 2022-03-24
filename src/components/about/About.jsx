@@ -10,10 +10,11 @@ function About() {
         <article className="about-main">
           <h3 className="about-title">Who we are</h3>
           <p className="about-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eum
-            officiis voluptatem laudantium eaque quisquam vel repudiandae
-            temporibus pariatur quam. Distinctio, quis commodi nihil ipsum
-            inventore sed quibusdam doloribus minima?
+            In early 2021 we started Perfect Pup as a way to connect furry
+            friends looking for new homes and people with the space to take them
+            in. We are a animal rescue, non-profit located right in the heart of
+            NB. Our team is made up of dedicated dogs lovers and a few generous
+            volunteers.
           </p>
           <img src={pawIcon} alt="paw icon" className="paw-icon" />
         </article>

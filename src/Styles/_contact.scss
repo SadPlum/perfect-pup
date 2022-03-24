@@ -1,3 +1,111 @@
 .contact {
+  font-family: $parag-font;
   color: black;
+  .contact-banner {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    .contact-img {
+      width: 100%;
+      @media (min-width: $lg) {
+        height: 500px;
+        object-fit: none;
+        object-position: 20% 10%;
+      }
+    }
+    .contact-title {
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.8rem;
+      width: 250px;
+      margin-left: -125px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @media (min-width: $lg) {
+        display: none;
+      }
+    }
+  }
+  .contact-info {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    .contact-info-lg {
+      display: none;
+      @media (min-width: $lg) {
+        display: block;
+        font-weight: 600;
+        font-size: 1.6rem;
+        width: 100%;
+        margin: auto;
+        padding-bottom: 10px;
+        border-bottom: 1px solid black;
+        margin-bottom: 20px;
+      }
+    }
+    .contact-groups {
+      @media (min-width: $lg) {
+        display: flex;
+        justify-content: space-between;
+        height: 201px;
+        margin-bottom: 20px;
+      }
+      .contact-info-group {
+        margin-bottom: 20px;
+        @media (min-width: $lg) {
+          display: flex;
+          flex-direction: column;
+          height: 201px;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .contact-info-title {
+          font-weight: 600;
+          font-size: 1.6rem;
+          width: 100%;
+          margin: auto;
+          padding-bottom: 10px;
+          border-bottom: 1px solid black;
+          margin-bottom: 20px;
+          @media (min-width: $lg) {
+            border: none;
+            padding-top: 20px;
+            height: 67px;
+          }
+        }
+        .contact-info-parag {
+          margin-bottom: 20px;
+          line-height: 1.2;
+          @media (min-width: $lg) {
+            height: 67px;
+          }
+        }
+        .paw-icon {
+          height: 30px;
+          width: 30px;
+          margin: auto;
+          @media (min-width: $lg) {
+            height: 40px;
+            width: 40px;
+          }
+        }
+        .contact-info-icons {
+          margin-bottom: 20px;
+          @media (min-width: $lg) {
+            height: 67px;
+          }
+          .contact-icon {
+            width: 40px;
+            height: 40px;
+            margin: 0 10px;
+          }
+        }
+      }
+    }
+    @media (min-width: $lg) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }

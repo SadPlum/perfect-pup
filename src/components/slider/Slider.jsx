@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ReactComponent as LeftArrow } from "../../icons/arrow-left-solid.svg";
 import { ReactComponent as RightArrow } from "../../icons/arrow-right-solid.svg";
+import { Link } from "react-router-dom";
 
 const Slider = () => {
   const [slider, setSlider] = useState(0);
@@ -49,7 +50,9 @@ const Slider = () => {
             obcaecati possimus veniam corrupti porro consequuntur eaque
             dignissimos, nostrum quisquam sunt?
           </p>
-          <button className="random-btn">Random Pup</button>
+          <Link to="/searchPage" className="random-btn">
+            Random Pup
+          </Link>
         </aside>
       </section>
     </>

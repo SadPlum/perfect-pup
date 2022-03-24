@@ -9,6 +9,7 @@ import Home from "./components/home/Home";
 import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
+import SearchPage from "./components/searchPage/SearchPage";
 
 function App() {
   return (
@@ -19,10 +20,12 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
+            <Route path="/perfect-pup" element={<Home />} />
             <Route path="/random"></Route>
             <Route path="/search"></Route>
             <Route path="/contact" element={<Contact />}></Route>
             <Route path="/about" element={<About />} />
+            <Route path="/searchPage" element={<SearchPage />} />
             <Route path="/tips"></Route>
           </Routes>
         </div>
