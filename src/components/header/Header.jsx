@@ -48,7 +48,13 @@ const Header = () => {
         {/* for tablet and destop */}
         <div className="nav-bar">
           <div className="tab">
-            <div className={location.pathname === "/home" ? "tab-active" : ""}>
+            <div
+              className={
+                location.pathname === "/home" || location.pathname === "/"
+                  ? "tab-active"
+                  : ""
+              }
+            >
               <Link to="/home" className="nav-link">
                 Home
               </Link>

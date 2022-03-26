@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter as BrowserRouter,
   Routes,
@@ -21,12 +21,10 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/perfect-pup" element={<Home />} />
-            <Route path="/random"></Route>
-            <Route path="/search"></Route>
-            <Route path="/contact" element={<Contact />}></Route>
+            <Route path="/search" element={<SearchPage />} />
             <Route path="/about" element={<About />} />
-            <Route path="/searchPage" element={<SearchPage />} />
             <Route path="/tips"></Route>
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
         <Footer />

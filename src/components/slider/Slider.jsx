@@ -50,7 +50,7 @@ const Slider = () => {
             obcaecati possimus veniam corrupti porro consequuntur eaque
             dignissimos, nostrum quisquam sunt?
           </p>
-          <Link to="/searchPage" className="random-btn">
+          <Link to={"/search"} state={{ random: true }} className="random-btn">
             Random Pup
           </Link>
         </aside>
