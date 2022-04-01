@@ -5,6 +5,7 @@
   width: 100%;
   margin: auto;
   margin-bottom: 20px;
+  padding-top: 30px;
 
   @media (min-width: $md) {
     display: flex;
@@ -12,6 +13,7 @@
     justify-content: space-around;
     align-items: center;
   }
+
   .singleDog-title {
     font-size: 1.3rem;
     line-height: 1.4;

@@ -198,7 +198,9 @@
           flex-direction: column;
   width: 100%;
   margin: auto;
-  height: 600px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   overflow: hidden;
   padding-bottom: 20px;
 }
@@ -228,6 +230,7 @@
      object-fit: cover;
   -o-object-position: 50% 40%;
      object-position: 50% 40%;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 1024px) {
@@ -309,6 +312,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 20px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -452,6 +456,19 @@
   margin: auto;
 }
 
+.about .about-section .about-points .about-values .about-sub {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-bottom: 10px;
+}
+
+@media (min-width: 1024px) {
+  .about .about-section .about-points .about-values .about-sub {
+    width: 33.3%;
+  }
+}
+
 .about .about-section .about-points .about-values .about-sub .about-sub-title {
   font-size: 1.4rem;
   font-weight: 500;
@@ -459,9 +476,15 @@
 }
 
 .about .about-section .about-points .about-values .about-sub .about-sub-description {
-  width: 60%;
+  width: 80%;
   margin: auto;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 1024px) {
+  .about .about-section .about-points .about-values .about-sub .about-sub-description {
+    height: 130px;
+  }
 }
 
 .about .about-section .about-points .about-values .about-sub .paw-icon {
@@ -844,6 +867,7 @@
   width: 100%;
   margin: auto;
   margin-bottom: 20px;
+  padding-top: 30px;
 }
 
 @media (min-width: 768px) {
@@ -988,6 +1012,39 @@
 .dogSearch .dogSearch-title {
   font-size: 1.5rem;
   margin: 10px 0;
+}
+
+.dogDisplay {
+  width: 100%;
+  width: 80%;
+  margin: auto;
+}
+
+.dogDisplay .dogDisplay-head .dogDisplay-title {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.dogDisplay .dogDisplay-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dogDisplay .dogDisplay-content .dogDisplay-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
 }
 
 body {

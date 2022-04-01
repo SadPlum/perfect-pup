@@ -1,21 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import DogSearch from "../dogSeach/DogSearch";
-import SingleDog from "../singleDog/SingleDog";
+import pawIcon from "../../icons/paw.png";
 
-function SearchPage(props) {
+function SearchPage({ dogList, setDogList }) {
   const [isDogFound, setIsDogFound] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const [dogs, setDogs] = useState("");
-  const [names, setNames] = useState("");
-  const location = useLocation();
-  const [random, setRandom] = useState(location.state);
+  const [dogs, setDogs] = useState([]);
+  // const location = useLocation();
 
-  const fetchDogs = async (amount, breedId) => {
+  const fetchDogs = async (amount) => {
     try {
       let response = await fetch(
-        `https://api.thedogapi.com/v1/images/search?size=med&mime_types=jpg&format=json&has_breeds=true&order=RANDOM&page=RANDOM&limit=${amount}&breed_ids=${breedId}`,
-        { method: "GET", mode: "cors" }
+        `https://api.thedogapi.com/v1/images/search?size=med&mime_types=jpg&format=json&has_breeds=true&order=RANDOM&page=RANDOM&limit=${amount}`,
+        {
+          method: "GET",
+          mode: "cors",
+          headers: { "x-api-key": "27de5e48-de76-4181-b9da-03d9fa9d13ec" },
+        }
       )
         .then((response) => response.json())
         .then((response) => {
@@ -29,47 +31,15 @@ function SearchPage(props) {
   };
 
   useEffect(() => {
-    fetchDogs(1, "");
+    if (dogs.length == 0) {
+      fetchDogs(6);
+    }
   }, []);
-
-  const handleClick = (amount, breed) => {
-    setIsLoading(true);
-
-    fetchDogs(amount, breed);
-  };
 
   return (
     <section className="searchPage">
-      {random && (
-        <SingleDog
-          url={dogs[0].url}
-          bredFor={dogs[0].breeds[0].bred_for}
-          temperament={dogs[0].breeds[0].temperament}
-          breed={dogs[0].breeds[0].name}
-        />
-      )}
-      {!random && <DogSearch />}
-
-      <div className="searchPage-btn-area">
-        <button
-          onClick={() => {
-            setRandom(true);
-            handleClick(1, "");
-          }}
-          className="searchPage-btn"
-        >
-          Random Pup
-        </button>
-
-        <button
-          onClick={() => {
-            setRandom(false);
-          }}
-          className="searchPage-btn"
-        >
-          Available dogs
-        </button>
-      </div>
+      {isLoading && <img src={pawIcon} alt="paw icon" />}
+      <DogSearch dogList={dogs} />
     </section>
   );
 }

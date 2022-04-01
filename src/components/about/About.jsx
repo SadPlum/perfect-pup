@@ -22,26 +22,29 @@ function About() {
           <h4 className="about-value-title">Values</h4>
           <div className="about-values">
             <article className="about-sub">
-              <h4 className="about-sub-title">Lorem</h4>
+              <h4 className="about-sub-title">Trust</h4>
               <p className="about-sub-description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Pariatur, ullam.
+                Many of our dogs are rescues, and have trust issues. So we
+                create a bond of trust with them. This ensures they are
+                comfortable with us and their future homes.
               </p>
               <img src={pawIcon} alt="paw icon" className="paw-icon" />
             </article>
             <article className="about-sub">
-              <h4 className="about-sub-title">Lorem</h4>
+              <h4 className="about-sub-title">Patience</h4>
               <p className="about-sub-description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
-                eaque!
+                Not all dogs are the same. Much like humans, some dogs require
+                more attention and have different needs. We must treat them with
+                love, patience and understanding.
               </p>
               <img src={pawIcon} alt="paw icon" className="paw-icon" />
             </article>
             <article className="about-sub">
-              <h4 className="about-sub-title">Lorem</h4>
+              <h4 className="about-sub-title">Care</h4>
               <p className="about-sub-description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
-                laboriosam?
+                Without us, our volunteers the adoptees, these dogs wouldn't be
+                able to be here. So we ensure they have the care they need and
+                deserve.
               </p>
               <img src={pawIcon} alt="paw icon" className="paw-icon" />
             </article>

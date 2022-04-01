@@ -10,7 +10,7 @@ function Contact() {
     <main className="contact">
       <section className="contact-banner">
         <img src={dogsContact} alt="picture of dog" className="contact-img" />
-        <h2 className="contact-title">Contact us today!</h2>
+        {/* <h2 className="contact-title">Contact us today!</h2> */}
       </section>
       <section className="contact-info">
         <h2 className="contact-info-lg">Contact us today!</h2>
