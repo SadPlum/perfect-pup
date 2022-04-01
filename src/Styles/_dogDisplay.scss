@@ -1,0 +1,23 @@
+.dogDisplay {
+  width: 100%;
+  width: 80%;
+  margin: auto;
+  .dogDisplay-head {
+    .dogDisplay-title {
+      font-weight: 600;
+      font-size: 1.4rem;
+    }
+  }
+  .dogDisplay-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .dogDisplay-img {
+      width: 200px;
+      height: 200px;
+
+      border-radius: 50%;
+    }
+  }
+}
