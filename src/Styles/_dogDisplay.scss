@@ -6,6 +6,7 @@
     .dogDisplay-title {
       font-weight: 600;
       font-size: 1.4rem;
+      margin-bottom: 20px;
     }
   }
   .dogDisplay-content {
@@ -16,8 +17,27 @@
     .dogDisplay-img {
       width: 200px;
       height: 200px;
-
       border-radius: 50%;
+      margin-bottom: 20px;
     }
+    .dogDisplay-learn-btn {
+      background: $dark-color-highlight;
+      color: $light-color;
+      padding: 10px 15px;
+      border-radius: 1px;
+      font-size: 1.2rem;
+      &:hover {
+        background: $dark-color;
+      }
+      &:focus {
+        background: $dark-color;
+      }
+    }
+  }
+  .dogDisplay-paw-icon {
+    height: 30px;
+    width: 30px;
+
+    margin: 20px auto;
   }
 }

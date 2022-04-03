@@ -970,8 +970,60 @@
           flex-direction: column;
 }
 
-.searchPage .searchPage-paw-icon {
-  height: 25px;
+.searchPage .searchPage-loading {
+  width: 100%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 75px;
+}
+
+.searchPage .searchPage-loading .searchPage-title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.searchPage .searchPage-loading .searchPage-paw-icon {
+  height: 50px;
+  width: 50px;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .searchPage .searchPage-btn-area {
@@ -1009,7 +1061,11 @@
   text-align: center;
 }
 
-.dogSearch .dogSearch-title {
+.dogSearch .dogSearch-head {
+  margin-bottom: 20px;
+}
+
+.dogSearch .dogSearch-head .dogSearch-title {
   font-size: 1.5rem;
   margin: 10px 0;
 }
@@ -1023,6 +1079,7 @@
 .dogDisplay .dogDisplay-head .dogDisplay-title {
   font-weight: 600;
   font-size: 1.4rem;
+  margin-bottom: 20px;
 }
 
 .dogDisplay .dogDisplay-content {
@@ -1045,6 +1102,29 @@
   width: 200px;
   height: 200px;
   border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.dogDisplay .dogDisplay-content .dogDisplay-learn-btn {
+  background: #963876;
+  color: #f0ecec;
+  padding: 10px 15px;
+  border-radius: 1px;
+  font-size: 1.2rem;
+}
+
+.dogDisplay .dogDisplay-content .dogDisplay-learn-btn:hover {
+  background: #832161;
+}
+
+.dogDisplay .dogDisplay-content .dogDisplay-learn-btn:focus {
+  background: #832161;
+}
+
+.dogDisplay .dogDisplay-paw-icon {
+  height: 30px;
+  width: 30px;
+  margin: 20px auto;
 }
 
 body {

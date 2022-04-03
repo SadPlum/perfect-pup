@@ -3,9 +3,37 @@
   justify-content: center;
   flex-direction: column;
 
-  .searchPage-paw-icon {
-    height: 25px;
+  .searchPage-loading {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 75px;
+    .searchPage-title {
+      text-align: center;
+      font-weight: 500;
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+    }
+    .searchPage-paw-icon {
+      height: 50px;
+      width: 50px;
+      animation: spin 2s linear infinite;
+      margin: auto;
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
   }
+
   .searchPage-btn-area {
     display: flex;
     flex-direction: row;
