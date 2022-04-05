@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter as BrowserRouter,
   Routes,
@@ -12,6 +12,8 @@ import Footer from "./components/footer/Footer";
 import SearchPage from "./components/searchPage/SearchPage";
 
 function App() {
+  const [dogList, setDogList] = useState(null);
+
   return (
     <BrowserRouter>
       <div className="container">
@@ -21,12 +23,13 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/perfect-pup" element={<Home />} />
-            <Route path="/random"></Route>
-            <Route path="/search"></Route>
-            <Route path="/contact" element={<Contact />}></Route>
+            <Route
+              path="/search"
+              element={<SearchPage dogList={dogList} setDogList={setDogList} />}
+            />
             <Route path="/about" element={<About />} />
-            <Route path="/searchPage" element={<SearchPage />} />
             <Route path="/tips"></Route>
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
         <Footer />

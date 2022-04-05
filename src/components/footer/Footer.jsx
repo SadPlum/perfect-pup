@@ -27,7 +27,7 @@ function Footer() {
         </div>
         <div className="footer-group">
           <section className="footer-links">
-            <Link to="/" className="footer-link-a">
+            <Link to="/home" className="footer-link-a">
               Home
             </Link>
             <Link to="/search" className="footer-link-a">

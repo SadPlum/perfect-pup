@@ -1,6 +1,7 @@
 .home-body {
   .slider {
-    display: none;
+    width: 100%;
+
     @media (min-width: $sm) {
       align-self: center;
       display: block;

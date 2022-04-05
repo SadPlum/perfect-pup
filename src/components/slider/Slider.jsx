@@ -44,14 +44,14 @@ const Slider = () => {
         </section>
 
         <aside className="text-box">
-          <h2 className="text-box-title">Lorem, ipsum.</h2>
+          <h2 className="text-box-title">Welcome, dog-lovers</h2>
           <p className="text-box-parag">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-            obcaecati possimus veniam corrupti porro consequuntur eaque
-            dignissimos, nostrum quisquam sunt?
+            We are Perfect Pup, a Fredericton based dog adoption service. We're
+            here to help dogs of all kinds and background find the perfect
+            homes.
           </p>
-          <Link to="/searchPage" className="random-btn">
-            Random Pup
+          <Link to={"/search"} className="random-btn">
+            Head to Search Page
           </Link>
         </aside>
       </section>
