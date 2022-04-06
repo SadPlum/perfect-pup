@@ -1,13 +1,12 @@
-@import "variables";
-
 .header {
   position: sticky;
   font-family: $main-font;
   position: sticky;
   top: 0;
   color: #f0ecec;
+  z-index: 1000;
   height: 75px;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: row;
   font-weight: 400;
@@ -51,7 +50,11 @@
 
   .nav-button {
     color: $light-color;
+    border-radius: 50%;
     &:focus {
+      background-color: $dark-color-highlight;
+    }
+    &:hover {
       background-color: $dark-color-highlight;
     }
     @media (min-width: $md) {
