@@ -1,8 +1,10 @@
 @import "variables";
 
 .header {
+  position: sticky;
   font-family: $main-font;
   position: sticky;
+  top: 0;
   color: #f0ecec;
   height: 75px;
   width: 100vw;
@@ -13,7 +15,6 @@
   justify-content: space-between;
   background-color: $dark-color;
   margin: 0px;
-  position: relative;
 
   .title-box {
     display: flex;
