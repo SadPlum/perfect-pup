@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import pawIcon from "../../icons/paw.png";
-import closeIcon from "../../icons/close.svg";
 
 function SingleDog({
   name,
