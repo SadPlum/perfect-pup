@@ -1,7 +1,11 @@
 .dogDisplay {
   width: 100%;
-  width: 80%;
+
   margin: auto;
+  @media (min-width: $md) {
+    width: 375px;
+    margin: 0;
+  }
   .dogDisplay-head {
     .dogDisplay-title {
       font-weight: 600;

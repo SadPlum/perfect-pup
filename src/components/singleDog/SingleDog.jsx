@@ -1,13 +1,32 @@
 import React, { useEffect, useState } from "react";
 import pawIcon from "../../icons/paw.png";
+import closeIcon from "../../icons/close.svg";
 
-function SingleDog({ url, temperament, name, breed, sex }) {
+function SingleDog({
+  name,
+  sex,
+  id,
+  breed,
+  age,
+  temperament,
+  img,
+  handleClick,
+}) {
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+
+    return () => (document.body.style.overflow = "unset");
+  });
+
   return (
     <section className="singleDog">
+      <button className="singleDog-close" onClick={handleClick}>
+        &#10006;
+      </button>
       <article className="singleDog-main">
         <div className="singleDog-img-box">
           <img
-            src={url}
+            src={img}
             className="singleDog-img"
             alt={`Image of ${name} the ${breed}`}
           />
@@ -18,17 +37,29 @@ function SingleDog({ url, temperament, name, breed, sex }) {
           <h3>{`Hi, my name is ${name}!`}</h3>
           <h4>{`I'm a ${breed}`}</h4>
         </div>
-        <img src={pawIcon} alt="paw icon" className="singleDog-paw-icon" />
-        <p className="singleDog-parag">
-          <span className="singleDog-parag-bold">Sex: </span>
-          {`${sex}`} <br />
-          <span className="singleDog-parag-bold">Traits: </span>
-          {`${temperament}`} <br />
-        </p>
-
-        <button className="singleDog-btn">{`Adopt ${name}`}</button>
+        {/* <img src={pawIcon} alt="paw icon" className="singleDog-paw-icon" /> */}
+        <div className="singleDog-content">
+          <article className="singleDog-parag">
+            <div className="singleDog-parag-box">
+              <span className="singleDog-parag-bold"> Sex:</span>
+              <span className="singleDog-parag-text">{`${sex}`}</span>
+            </div>
+            <div className="singleDog-parag-box">
+              <span className="singleDog-parag-bold">Age:</span>
+              <span className="singleDog-parag-text">{`${age}`}</span>
+            </div>
+            <div className="singleDog-parag-box">
+              <span className="singleDog-parag-bold">Traits:</span>
+              <span className="singleDog-parag-text">{`${temperament}`}</span>
+            </div>
+          </article>
+          <div>
+            <button className="singleDog-btn">{`Adopt ${name}`}</button>
+          </div>
+        </div>
       </article>
-      <div className="singleDog-line"></div>
+
+      {/* <div className="singleDog-line"></div> */}
     </section>
   );
 }
