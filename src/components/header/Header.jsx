@@ -40,8 +40,8 @@ const Header = () => {
           </IconButton>
         </div>
         {drop && (
-          <div>
-            <Dropdown stateChange={setDrop} />
+          <div className="dropdown">
+            <Dropdown stateChange={setDrop} style={{ zIndex: "1000" }} />
           </div>
         )}
 

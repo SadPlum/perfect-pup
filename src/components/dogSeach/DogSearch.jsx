@@ -45,19 +45,22 @@ function DogSearch({ dogList }) {
           ))} */}
 
         {/* IF DOG IS NOT ADOPTED, RETURN PROFILES */}
+
         {dogArr.map((dog, i) => {
           if (dog.adopted === false) {
             return (
-              <DogDisplay
-                key={i}
-                id={dog.i}
-                name={dog.dog.name}
-                breed={dog.dog.breed}
-                sex={dog.dog.sex}
-                img={dog.dog.img}
-                age={dog.dog.age}
-                temperament={dog.dog.temperament}
-              />
+              <div className="dogListings">
+                <DogDisplay
+                  key={i}
+                  id={dog.i}
+                  name={dog.dog.name}
+                  breed={dog.dog.breed}
+                  sex={dog.dog.sex}
+                  img={dog.dog.img}
+                  age={dog.dog.age}
+                  temperament={dog.dog.temperament}
+                />
+              </div>
             );
           }
         })}
