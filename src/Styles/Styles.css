@@ -1,9 +1,8 @@
 .dropdownContainer {
   width: 100%;
-  display: inline;
   position: absolute;
   background-color: #f0ecec;
-  z-index: 10000;
+  z-index: 1000;
   font-family: "Roboto", sans-serif;
   border-bottom: 4px solid #963876;
   border-radius: 10px;
@@ -58,12 +57,15 @@
 }
 
 .header {
-  font-family: "Mulish", sans-serif;
   position: -webkit-sticky;
   position: sticky;
+  font-family: "Mulish", sans-serif;
+  position: sticky;
+  top: 0;
   color: #f0ecec;
+  z-index: 1000;
   height: 75px;
-  width: 100vw;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -80,7 +82,6 @@
           justify-content: space-between;
   background-color: #832161;
   margin: 0px;
-  position: relative;
 }
 
 .header .title-box {
@@ -140,9 +141,14 @@
 
 .header .nav-button {
   color: #f0ecec;
+  border-radius: 50%;
 }
 
 .header .nav-button:focus {
+  background-color: #963876;
+}
+
+.header .nav-button:hover {
   background-color: #963876;
 }
 
@@ -383,6 +389,80 @@
   .home-body .slider {
     width: 1960px;
   }
+}
+
+.home-body .home-content {
+  text-align: center;
+}
+
+.home-body .home-content .home-article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.home-body .home-content .home-img {
+  width: 100vw;
+  margin-bottom: 20px;
+}
+
+.home-body .home-content .home-title {
+  font-weight: 500;
+  width: 80%;
+  margin: auto;
+  border-bottom: 2px solid black;
+  font-size: 1.4rem;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 1024px) {
+  .home-body .home-content .home-title {
+    padding-bottom: 40px;
+    margin-bottom: 60px;
+    font-size: 2rem;
+  }
+}
+
+.home-body .home-content .home-parag {
+  width: 80%;
+  margin: auto;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 1024px) {
+  .home-body .home-content .home-parag {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+  }
+}
+
+.home-body .home-content .home-btn {
+  background: #963876;
+  padding: 10px 15px;
+  border-radius: 1px;
+  font-size: 1.2rem;
+  color: #f0ecec;
+  margin-bottom: 20px;
+}
+
+.home-body .home-content .home-btn:hover {
+  background: #832161;
+}
+
+.home-body .home-content .home-btn:focus {
+  background: #832161;
+}
+
+.home-body .home-content .home-paw {
+  width: 30px;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 .about {
@@ -862,53 +942,98 @@
 }
 
 .singleDog {
-  text-align: center;
   line-height: 1.3;
   width: 100%;
+  min-width: 375px;
+  z-index: 10;
+  position: fixed;
+  text-align: center;
+  height: 100%;
+  top: 75px;
+  left: 0;
+  right: 0;
   margin: auto;
   margin-bottom: 20px;
-  padding-top: 30px;
+  background-color: #f0ecec;
+  overflow: auto;
 }
 
-@media (min-width: 768px) {
-  .singleDog {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 300px;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
+.singleDog .singleDog-close {
+  height: 40px;
+  width: 40px;
+  color: black;
+  font-size: 2rem;
+  position: absolute;
+  z-index: 10;
+  right: 15px;
+  top: 15px;
+  background-color: rgba(240, 236, 236, 0.6);
+  border-radius: 50%;
 }
 
 .singleDog .singleDog-title {
   font-size: 1.3rem;
   line-height: 1.4;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
 }
 
-@media (min-width: 768px) {
-  .singleDog .singleDog-info {
-    width: 375px;
-  }
+.singleDog .singleDog-info {
+  width: 375px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 50vh;
+  margin-bottom: 75px;
 }
 
 .singleDog .singleDog-parag {
   width: 80%;
+  height: 100%;
   margin: auto;
   margin-bottom: 20px;
+}
+
+.singleDog .singleDog-parag .singleDog-parag-box {
+  margin-bottom: 5px;
 }
 
 .singleDog .singleDog-parag .singleDog-parag-bold {
   font-weight: 600;
 }
 
+.singleDog .singleDog-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 50%;
+}
+
 .singleDog .singleDog-img {
-  width: 375px;
-  height: 300px;
+  height: 40vh;
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .singleDog .singleDog-img {
+    height: auto;
+    width: 100%;
+  }
 }
 
 .singleDog .singleDog-img-box {
@@ -918,9 +1043,14 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  height: 30%;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .singleDog .singleDog-img-box {
+    width: 100%;
+  }
 }
 
 .singleDog .singleDog-paw-icon {
@@ -1059,6 +1189,7 @@
 
 .dogSearch {
   text-align: center;
+  width: 100%;
 }
 
 .dogSearch .dogSearch-head {
@@ -1070,10 +1201,40 @@
   margin: 10px 0;
 }
 
+@media (min-width: 768px) {
+  .dogSearch .dogListings {
+    width: 40%;
+    margin: 0;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .dogSearch .dogListings {
+    width: 30%;
+  }
+}
+
 .dogDisplay {
   width: 100%;
-  width: 80%;
   margin: auto;
+}
+
+@media (min-width: 768px) {
+  .dogDisplay {
+    width: 375px;
+    margin: 0;
+  }
 }
 
 .dogDisplay .dogDisplay-head .dogDisplay-title {
