@@ -61,7 +61,7 @@
         display: flex;
         justify-content: space-between;
         height: 201px;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
       }
       .contact-info-group {
         margin-bottom: 40px;
@@ -106,6 +106,9 @@
         }
         .contact-info-icons {
           margin-bottom: 40px;
+          display: flex;
+         justify-content: center;
+         align-items: center;
           @media (min-width: $lg) {
             height: 50px;
           }
