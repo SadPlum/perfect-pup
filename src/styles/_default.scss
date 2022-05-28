@@ -1,0 +1,19 @@
+body {
+  background-color: $light-color;
+  font-family: $parag-font;
+  height: 100%;
+  min-width: 375px;
+}
+.container {
+  position: relative;
+  min-height: 100vh;
+}
+.wrap {
+  padding-bottom: 225px;
+  @media (min-width: 768px) {
+    padding-bottom: 175px;
+  }
+}
+a {
+  color: $light-color;
+}

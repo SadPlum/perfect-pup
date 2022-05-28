@@ -4,15 +4,17 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import Header from "./components/header/Header";
-import Home from "./components/home/Home";
-import About from "./components/about/About";
-import Contact from "./components/contact/Contact";
-import Footer from "./components/footer/Footer";
-import SearchPage from "./components/searchPage/SearchPage";
+import Header from "./components/core/header/Header";
+import Home from "./components/pages/home/Home";
+import About from "./components/pages/about/About";
+import Contact from "./components/pages/contact/Contact";
+import Footer from "./components/core/footer/Footer";
+import SearchPage from "./components/pages/searchPage/SearchPage";
+import SingleDogDisplayPage from "./components/pages/singleDogDisplayPage/SingleDogDisplayPage";
+import "./styles/styles.css";
 
 function App() {
-  const [dogList, setDogList] = useState(null);
+  const [dogList, setDogList] = useState();
 
   return (
     <BrowserRouter>
@@ -27,9 +29,16 @@ function App() {
               path="/search"
               element={<SearchPage dogList={dogList} setDogList={setDogList} />}
             />
+
+            <Route
+              path="/search/:dogId"
+              element={<SingleDogDisplayPage dogList={dogList} />}
+            />
+
             <Route path="/about" element={<About />} />
             <Route path="/tips"></Route>
             <Route path="/contact" element={<Contact />} />
+            <Route path="/*" element={<Home />} />
           </Routes>
         </div>
         <Footer />
