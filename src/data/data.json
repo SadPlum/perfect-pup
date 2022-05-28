@@ -3,6 +3,7 @@
     "id": 0,
     "adopted": false,
     "waiting": false,
+    "vaccinated": true,
     "dog": {
       "name": "Molly",
       "breed": "Border Collie",
@@ -16,6 +17,7 @@
     "id": 1,
     "adopted": false,
     "waiting": false,
+    "vaccinated": true,
     "dog": {
       "name": "Max",
       "breed": "American Bulldog",
@@ -29,6 +31,7 @@
     "id": 2,
     "adopted": false,
     "waiting": false,
+    "vaccinated": true,
     "dog": {
       "name": "Buzz",
       "breed": "Burmese Mountain Dog",
@@ -42,6 +45,7 @@
     "id": 3,
     "adopted": false,
     "waiting": false,
+    "vaccinated": true,
     "dog": {
       "name": "Cricket",
       "breed": "Shiba Inu",
@@ -55,6 +59,7 @@
     "id": 4,
     "adopted": false,
     "waiting": false,
+    "vaccinated": false,
     "dog": {
       "name": "Bill",
       "breed": "Shetland Sheepdog",
@@ -68,6 +73,7 @@
     "id": 5,
     "adopted": false,
     "waiting": false,
+    "vaccinated": true,
     "dog": {
       "name": "Mario",
       "breed": "American Bulldog",
@@ -81,6 +87,7 @@
     "id": 6,
     "adopted": false,
     "waiting": false,
+    "vaccinated": false,
     "dog": {
       "name": "Tina",
       "breed": "Affenpinscher",
@@ -94,6 +101,7 @@
     "id": 7,
     "adopted": false,
     "waiting": false,
+    "vaccinated": true,
     "dog": {
       "name": "Francesca",
       "breed": "Border Collie",
@@ -107,6 +115,7 @@
     "id": 8,
     "adopted": false,
     "waiting": false,
+    "vaccinated": true,
     "dog": {
       "name": "Guardian",
       "breed": "Kooikerhondje",
@@ -120,6 +129,7 @@
     "id": 9,
     "adopted": false,
     "waiting": false,
+    "vaccinated": false,
     "dog": {
       "name": "Lucille",
       "breed": "Saluki",
@@ -133,6 +143,7 @@
     "id": 10,
     "adopted": false,
     "waiting": false,
+    "vaccinated": true,
     "dog": {
       "name": "Salty",
       "breed": "American Eskimo Dog",

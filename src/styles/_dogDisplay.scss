@@ -1,0 +1,49 @@
+.dogDisplay {
+  width: 100%;
+
+  margin: auto;
+  margin-bottom: 20px;
+  @media (min-width: $md) {
+    width: 375px;
+    margin: 0;
+  }
+  .dogDisplay-head {
+    .dogDisplay-title {
+      font-weight: 600;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
+  }
+  .dogDisplay-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .dogDisplay-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+    .dogDisplay-learn-btn {
+      background: $dark-color-highlight;
+      color: $light-color;
+      padding: 10px 15px;
+      border-radius: 1px;
+      font-size: 1.2rem;
+      &:hover {
+        background: $dark-color;
+      }
+      &:focus {
+        background: $dark-color;
+      }
+    }
+  }
+  .dogDisplay-paw-icon {
+    height: 30px;
+    width: 30px;
+
+    margin: 20px auto;
+    padding-top: 20px;
+  }
+}
