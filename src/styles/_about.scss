@@ -50,14 +50,16 @@
         font-weight: 600;
         padding-bottom: 20px;
         border-bottom: 1px solid black;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
       }
       .about-values {
         width: 80%;
         margin: auto;
+       
         .about-sub {
           width: fit-content;
-          padding-bottom: 10px;
+        
+          margin-bottom: 20px;
           @media (min-width: $lg) {
             width: 33.3%;
           }
@@ -69,7 +71,7 @@
           .about-sub-description {
             width: 80%;
             margin: auto;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             @media (min-width: $lg) {
               height: 130px;
             }

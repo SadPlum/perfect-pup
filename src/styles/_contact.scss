@@ -60,8 +60,13 @@
       @media (min-width: $lg) {
         display: flex;
         justify-content: space-between;
+<<<<<<< HEAD:src/styles/_contact.scss
 
         margin-bottom: 20px;
+=======
+        height: 201px;
+        margin-bottom: 40px;
+>>>>>>> 96cb2e91f7c5d78eb87661a01ff7c5a35fd0d4bb:src/Styles/_contact.scss
       }
       .contact-info-group {
         margin-bottom: 20px;
@@ -106,6 +111,9 @@
         }
         .contact-info-icons {
           margin-bottom: 40px;
+          display: flex;
+         justify-content: center;
+         align-items: center;
           @media (min-width: $lg) {
             height: 50px;
           }
