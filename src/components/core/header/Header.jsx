@@ -5,24 +5,25 @@ import IconButton from "@mui/material/IconButton";
 import Dropdown from "./headerComponents/dropdown/Dropdown";
 
 const Header = () => {
-  const [drop, setDrop] = useState(false);
   let location = useLocation();
+  // location for tab highlight
   const [page, setPage] = useState(location);
+  // dropdown and handleClick for dropdown on smaller screens
+  const [dropDown, setDropDown] = useState(false);
   const handleClick = () => {
-    setDrop(!drop);
+    setDropDown(!dropDown);
   };
 
-  const buttonRef = useRef();
-
+  // button reference to turn off dropdown when clicking on page
+  const dropdownButtonRef = useRef();
   useEffect(() => {
     document.body.addEventListener("click", (e) => {
-      if (buttonRef.current.contains(e.target)) {
+      if (dropdownButtonRef.current.contains(e.target)) {
         return;
       }
-      setDrop(false);
+      setDropDown(false);
     });
   }, [page]);
-  useEffect(() => {}, [page]);
 
   const tags = [`Home`, `Search`, `About`, `Tips`, `Contact`];
 
@@ -35,14 +36,14 @@ const Header = () => {
 
       <nav className="nav">
         {/* for mobile */}
-        <div className="nav-button" ref={buttonRef}>
+        <div className="nav-button" ref={dropdownButtonRef}>
           <IconButton onClick={handleClick}>
             <MenuIcon sx={{ color: "#f0ecec" }} />
           </IconButton>
         </div>
-        {drop && (
+        {dropDown && (
           <div className="dropdown">
-            <Dropdown stateChange={setDrop} style={{ zIndex: "1000" }} />
+            <Dropdown stateChange={setDropDown} style={{ zIndex: "1000" }} />
           </div>
         )}
 
@@ -51,7 +52,9 @@ const Header = () => {
           <div className="tab">
             <div
               className={
-                location.pathname === "/home" || location.pathname === "/"
+                location.pathname === "/home" ||
+                location.pathname === "/perfect-pup" ||
+                location.pathname === "/"
                   ? "tab-active"
                   : ""
               }

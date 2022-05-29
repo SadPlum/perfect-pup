@@ -5,7 +5,6 @@ import data from "../../../data/data.json";
 
 function SearchPage({ dogList, setDogList }) {
   const [loaded, setLoaded] = useState(false);
-  const [dogData, setDogData] = useState(dogList);
 
   useEffect(() => {
     // Temporary for load on first entry
@@ -14,7 +13,7 @@ function SearchPage({ dogList, setDogList }) {
     setTimeout(() => {
       setLoaded(true);
     }, 2000);
-    setDogData(data);
+
     setDogList(data);
   }, []);
 

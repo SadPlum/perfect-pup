@@ -1,10 +1,10 @@
 import React from "react";
 
 import pawIcon from "../../../icons/paw.png";
-import { Link } from "react-router-dom";
+
 import Button from "../Button/Button";
 
-function DogDisplay({ key, id, name, sex, breed, age, temperament, img }) {
+function DogDisplay({ id, name, sex, breed, age, temperament, img }) {
   return (
     <>
       <article className="dogDisplay">

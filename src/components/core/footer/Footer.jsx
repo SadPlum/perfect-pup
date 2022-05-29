@@ -47,9 +47,18 @@ function Footer() {
       </div>
       <section className="author">
         <p className="footer-text">A React App by Sebastien Legault </p>
-        <a href="https://github.com/SadPlum" className="footer-github">
-          github.com/SadPlum
-        </a>
+        <div className="footer-links">
+          <span>
+            <a href="https://sebastienlegault.com" className="footer-link">
+              sebastienlegault.com
+            </a>
+          </span>
+          <span>
+            <a href="https://github.com/SadPlum/" className="footer-link">
+              github.com/SadPlum
+            </a>
+          </span>
+        </div>
       </section>
     </footer>
   );

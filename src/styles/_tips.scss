@@ -1,0 +1,98 @@
+.tips-page {
+  margin-bottom: 20px;
+
+  .tips-banner {
+    width: 100%;
+    margin-bottom: 20px;
+    @media (min-width: $md) {
+      margin-bottom: 40px;
+    }
+    .tips-image {
+      width: 100%;
+      height: 400px;
+      object-fit: none;
+      object-position: 50% 70%;
+    }
+  }
+  .tips-page-header {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+    @media (min-width: $md) {
+      width: 600px;
+    }
+    .tips-page-title {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      @media (min-width: $md) {
+        font-size: 2rem;
+        margin-bottom: 30px;
+      }
+    }
+    .tips-page-description {
+      line-height: 1.2rem;
+      @media (min-width: $md) {
+        line-height: 1.4rem;
+        margin-bottom: 40px;
+      }
+    }
+  }
+  .tips-credits {
+    text-align: center;
+    padding-bottom: 20px;
+    .tips-credits-link {
+      color: $off-black;
+      text-decoration: underline;
+    }
+  }
+
+  //   TIP SUBCOMPONENT
+  .tip {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media (min-width: $md) {
+      width: 600px;
+      margin: auto;
+    }
+    .tip-mobile {
+      @media (min-width: $md) {
+        display: none;
+      }
+    }
+    .tip-main {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      @media (min-width: $md) {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 600px;
+        margin-bottom: 25px;
+      }
+      .tip-text {
+        font-weight: 600;
+        margin-bottom: 15px;
+        font-size: 1.3rem;
+        @media (min-width: $md) {
+          margin: 0 40px 15px 40px;
+        }
+      }
+      .paw-icon-md {
+        display: none;
+        @media (min-width: $md) {
+          display: block;
+        }
+      }
+    }
+    .paw-icon {
+      height: 30px;
+      width: 30px;
+      margin-bottom: 15px;
+    }
+  }
+}
