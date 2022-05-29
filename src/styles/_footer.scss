@@ -1,14 +1,11 @@
 .footer {
-  height: 225px;
   margin-top: 20px;
   width: 100%;
   background-color: $off-black;
   position: absolute;
   bottom: 0;
   color: $light-color;
-  @media (min-width: $md) {
-    height: 175px;
-  }
+
   .footer-group {
     text-align: center;
     @media (min-width: $md) {
@@ -66,13 +63,23 @@
 
   .author {
     width: 100%;
-
     text-align: center;
     margin-top: 5px;
     .footer-text {
       font-size: 0.9rem;
+      margin-bottom: 10px;
     }
-    .footer-github {
+    .footer-links {
+      margin: auto;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: row;
+      @media (min-width: $md) {
+        width: 50%;
+      }
+    }
+    .footer-link {
       color: $light-color;
       font-size: 0.8rem;
     }

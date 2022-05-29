@@ -19,9 +19,7 @@ export default function Home() {
             <Button to="/search" text="Head to Search Page" />
           </aside>
         </section>
-        <section className="home-row">
-          <p></p>
-        </section>
+        <section className="home-row"></section>
       </main>
     </>
   );
