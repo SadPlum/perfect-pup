@@ -1,0 +1,80 @@
+.home-body {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  .home-row {
+    margin-bottom: 40px !important;
+  }
+  .text-box {
+    display: flex;
+    flex-direction: column;
+    font-family: $parag-font;
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+    align-items: center;
+    background-color: $light-color;
+    height: 100%;
+    @media (min-width: $lg) {
+      width: 50%;
+    }
+    .text-box-title {
+      font-weight: 500;
+      width: 80%;
+      border-bottom: 2px solid black;
+      font-size: 1.4rem;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+      @media (min-width: $lg) {
+        padding-bottom: 40px;
+        margin-bottom: 60px;
+        font-size: 2rem;
+      }
+    }
+    .text-box-parag {
+      width: 80%;
+
+      font-weight: 300;
+      margin-bottom: 20px;
+      @media (min-width: $lg) {
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+      }
+    }
+  }
+  .paw-icon-home {
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    margin-bottom: 40px;
+    @media (min-width: $lg) {
+      display: none;
+    }
+  }
+
+  .home-contact-information {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    .text-box {
+      width: 100%;
+    }
+  }
+
+  // HOME SUBCOMPONENTS
+  .slider {
+    width: 100%;
+    @media (min-width: $sm) {
+      align-self: center;
+      display: block;
+      margin: auto;
+    }
+    @media (min-width: $lg) {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

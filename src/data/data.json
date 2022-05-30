@@ -1,0 +1,156 @@
+[
+  {
+    "id": 0,
+    "adopted": false,
+    "waiting": false,
+    "vaccinated": true,
+    "dog": {
+      "name": "Molly",
+      "breed": "Border Collie",
+      "sex": "F",
+      "age": 5,
+      "img": "https://cdn2.thedogapi.com/images/MnFVJ4XuT.jpg",
+      "temperament": "Tenacious, Keen, Energetic, Responsive, Alert, Intelligent"
+    }
+  },
+  {
+    "id": 1,
+    "adopted": false,
+    "waiting": false,
+    "vaccinated": true,
+    "dog": {
+      "name": "Max",
+      "breed": "American Bulldog",
+      "sex": "M",
+      "age": 7,
+      "img": "https://cdn2.thedogapi.com/images/_bdHCzK_u.jpg",
+      "temperament": "Friendly, Assertive, Energetic, Loyal, Gentle, Confident, Dominant"
+    }
+  },
+  {
+    "id": 2,
+    "adopted": false,
+    "waiting": false,
+    "vaccinated": true,
+    "dog": {
+      "name": "Buzz",
+      "breed": "Burmese Mountain Dog",
+      "sex": "M",
+      "age": 1,
+      "img": "https://cdn2.thedogapi.com/images/DbcfkQrav.jpg",
+      "temperament": "Friendly, Lively, Gentle, Watchful, Calm"
+    }
+  },
+  {
+    "id": 3,
+    "adopted": false,
+    "waiting": false,
+    "vaccinated": true,
+    "dog": {
+      "name": "Cricket",
+      "breed": "Shiba Inu",
+      "sex": "F",
+      "age": 4,
+      "img": "https://cdn2.thedogapi.com/images/hweK6aOl9.jpg",
+      "temperament": "Charming, Fearless, Keen, Alert, Confident, Faithful"
+    }
+  },
+  {
+    "id": 4,
+    "adopted": false,
+    "waiting": false,
+    "vaccinated": false,
+    "dog": {
+      "name": "Bill",
+      "breed": "Shetland Sheepdog",
+      "sex": "M",
+      "age": 2,
+      "img": "https://cdn2.thedogapi.com/images/rJa29l9E7_1280.jpg",
+      "temperament": "Affectionate, Lively, Responsive, Alert, Loyal, Reserved, Playful, Gentle, Intelligent, Active, Trainable, Strong"
+    }
+  },
+  {
+    "id": 5,
+    "adopted": false,
+    "waiting": false,
+    "vaccinated": true,
+    "dog": {
+      "name": "Mario",
+      "breed": "American Bulldog",
+      "sex": "M",
+      "age": 4,
+      "img": "https://cdn2.thedogapi.com/images/SkZY1e9NQ_1280.jpg",
+      "temperament": ""
+    }
+  },
+  {
+    "id": 6,
+    "adopted": false,
+    "waiting": false,
+    "vaccinated": false,
+    "dog": {
+      "name": "Tina",
+      "breed": "Affenpinscher",
+      "sex": "F",
+      "age": 8,
+      "img": "https://cdn2.thedogapi.com/images/mhikcBw9U.jpg",
+      "temperament": "Stubborn, Curious, Playful, Adventurous, Active, Fun-loving"
+    }
+  },
+  {
+    "id": 7,
+    "adopted": false,
+    "waiting": false,
+    "vaccinated": true,
+    "dog": {
+      "name": "Francesca",
+      "breed": "Border Collie",
+      "sex": "F",
+      "age": 4,
+      "img": "https://cdn2.thedogapi.com/images/lpqw_Acag.jpg",
+      "temperament": "Tenacious, Keen, Energetic, Responsive, Alert, Intelligent"
+    }
+  },
+  {
+    "id": 8,
+    "adopted": false,
+    "waiting": false,
+    "vaccinated": true,
+    "dog": {
+      "name": "Guardian",
+      "breed": "Kooikerhondje",
+      "sex": "M",
+      "age": 6,
+      "img": "https://cdn2.thedogapi.com/images/lcsQYiWMN.jpg",
+      "temperament": "Benevolent, Agile, Alert, Intelligent, Active, Territorial"
+    }
+  },
+  {
+    "id": 9,
+    "adopted": false,
+    "waiting": false,
+    "vaccinated": false,
+    "dog": {
+      "name": "Lucille",
+      "breed": "Saluki",
+      "sex": "F",
+      "age": 8,
+      "img": "https://cdn2.thedogapi.com/images/ZjkHW13DK.jpg",
+      "temperament": "Aloof, Reserved, Intelligent, Quiet"
+    }
+  },
+  {
+    "id": 10,
+    "adopted": false,
+    "waiting": false,
+    "vaccinated": true,
+    "dog": {
+      "name": "Salty",
+      "breed": "American Eskimo Dog",
+      "sex": "M",
+      "age": 2,
+      "img": "https://cdn2.thedogapi.com/images/Bymjyec4m_1280.jpg",
+      "temperament": "Friendly, Alert, Reserved, Intelligent, Protective"
+    }
+  }
+]

@@ -1,0 +1,62 @@
+.dogSearch {
+  text-align: center;
+  width: 100%;
+  .dogSearch-head {
+    margin-bottom: 20px;
+    @media (min-width: $md) {
+      margin-bottom: 40px;
+    }
+    .dogSearch-title {
+      font-size: 1.5rem;
+      margin: 20px 0;
+    }
+  }
+  .searchBars {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $md) {
+      flex-direction: row;
+      justify-content: center;
+    }
+    .searchOption {
+      width: 50%;
+      margin: auto;
+      margin-bottom: 5px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      @media (min-width: $md) {
+        width: 175px;
+        justify-content: flex-start;
+        margin: 0;
+      }
+
+      .label {
+        margin-right: 5px;
+      }
+      .select {
+        width: 60px;
+      }
+    }
+    @media (min-width: $md) {
+      .searchOption-last {
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  .dogListings {
+    @media (min-width: $md) {
+      width: 40%;
+      margin: 0;
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-bottom: 40px;
+    }
+    @media (min-width: $lg) {
+      width: 30%;
+    }
+  }
+}
