@@ -322,39 +322,11 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 20px;
 }
 
-.home-body .slider {
-  width: 100%;
-}
-
-@media (min-width: 500px) {
-  .home-body .slider {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    display: block;
-    margin: auto;
-  }
-}
-
-@media (min-width: 1024px) {
-  .home-body .slider {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    width: 100%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
+.home-body .home-row {
+  margin-bottom: 40px !important;
 }
 
 .home-body .text-box {
@@ -411,6 +383,62 @@ a {
   .home-body .text-box .text-box-parag {
     font-size: 1.2rem;
     margin-bottom: 40px;
+  }
+}
+
+.home-body .paw-icon-home {
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 1024px) {
+  .home-body .paw-icon-home {
+    display: none;
+  }
+}
+
+.home-body .home-contact-information {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.home-body .home-contact-information .text-box {
+  width: 100%;
+}
+
+.home-body .slider {
+  width: 100%;
+}
+
+@media (min-width: 500px) {
+  .home-body .slider {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    display: block;
+    margin: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-body .slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 

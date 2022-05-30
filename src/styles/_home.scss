@@ -1,23 +1,10 @@
 .home-body {
   display: flex;
   flex-direction: column;
-  .slider {
-    width: 100%;
-
-    @media (min-width: $sm) {
-      align-self: center;
-      display: block;
-      margin: auto;
-    }
-    @media (min-width: $lg) {
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      justify-content: center;
-      align-items: center;
-    }
+  margin-bottom: 20px;
+  .home-row {
+    margin-bottom: 40px !important;
   }
-
   .text-box {
     display: flex;
     flex-direction: column;
@@ -53,6 +40,41 @@
         font-size: 1.2rem;
         margin-bottom: 40px;
       }
+    }
+  }
+  .paw-icon-home {
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    margin-bottom: 40px;
+    @media (min-width: $lg) {
+      display: none;
+    }
+  }
+
+  .home-contact-information {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    .text-box {
+      width: 100%;
+    }
+  }
+
+  // HOME SUBCOMPONENTS
+  .slider {
+    width: 100%;
+    @media (min-width: $sm) {
+      align-self: center;
+      display: block;
+      margin: auto;
+    }
+    @media (min-width: $lg) {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
