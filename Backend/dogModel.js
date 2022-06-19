@@ -30,6 +30,7 @@ const dogSchema = new mongoose.Schema(
       enum: ['small', 'medium', 'large'],
     },
     temperament: { type: String },
+    description: { type: String },
   }
   // },
 );

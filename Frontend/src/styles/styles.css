@@ -1431,48 +1431,6 @@ a {
   }
 }
 
-.dogSearch .searchBars .searchOption {
-  width: 50%;
-  margin: auto;
-  margin-bottom: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-@media (min-width: 768px) {
-  .dogSearch .searchBars .searchOption {
-    width: 175px;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    margin: 0;
-  }
-}
-
-.dogSearch .searchBars .searchOption .label {
-  margin-right: 5px;
-}
-
-.dogSearch .searchBars .searchOption .select {
-  width: 60px;
-}
-
-@media (min-width: 768px) {
-  .dogSearch .searchBars .searchOption-last {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-}
-
 @media (min-width: 768px) {
   .dogSearch .dogListings {
     width: 40%;
@@ -1576,5 +1534,114 @@ a {
 
 .btn:focus {
   background: #832161;
+}
+
+.admin {
+  margin-left: 15px;
+  margin-top: 25px;
+}
+
+.admin .admin-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.admin .admin-sub-title {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.admin .admin-input {
+  line-height: 1.3rem;
+  margin-bottom: 5px;
+  font-size: 1.15rem;
+}
+
+.admin .admin-button {
+  border: 1px solid black;
+  color: black;
+}
+
+.admin .admin-image {
+  width: 500px;
+  display: inline;
+  margin: 20px;
+}
+
+.admin .admin-button {
+  margin-right: 15px;
+  display: inline;
+}
+
+.admin .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.admin .description-title {
+  display: block;
+}
+
+.admin .empty {
+  border: 2px solid red;
+}
+
+.admin .admin-warning {
+  display: inline;
+  font-weight: 600;
+  border-bottom: 2px solid red;
+}
+
+.admin .disabled {
+  display: none;
+}
+
+.searchOption {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .searchOption {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 160px;
+    margin: 0;
+  }
+}
+
+.searchOption .label {
+  margin-right: 5px;
+}
+
+.searchOption .select {
+  width: 70px;
+}
+
+@media (min-width: 768px) {
+  .searchOption-last {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

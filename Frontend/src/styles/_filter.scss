@@ -1,0 +1,26 @@
+.searchOption {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media (min-width: $md) {
+    justify-content: flex-start;
+    width: 160px;
+    margin: 0;
+  }
+
+  .label {
+    margin-right: 5px;
+  }
+  .select {
+    width: 70px;
+  }
+}
+@media (min-width: $md) {
+  .searchOption-last {
+    justify-content: flex-end;
+  }
+}

@@ -4,21 +4,23 @@ import pawIcon from "../../../icons/paw.png";
 
 import Button from "../Button/Button";
 
-function DogDisplay({ id, name, sex, breed, age, temperament, img }) {
+function DogDisplay({ id, name, sex, breed, age, temperament, image }) {
   return (
     <>
-      <article className="dogDisplay">
-        <div className="dogDisplay-head">
-          <h3 className="dogDisplay-title">{`${name}, ${sex}`}</h3>
+      <article className=" dogListings">
+        <div className="dogDisplay">
+          <div className="dogDisplay-head">
+            <h3 className="dogDisplay-title">{`${name}, ${sex}`}</h3>
+          </div>
+          <div className="dogDisplay-content">
+            <img src={image} alt="" className="dogDisplay-img" />
+            <Button
+              to={{ pathname: `/search/${id}` }}
+              text={`Learn about ${name}`}
+            />
+          </div>
+          <img src={pawIcon} alt="paw icon" className="dogDisplay-paw-icon" />
         </div>
-        <div className="dogDisplay-content">
-          <img src={img} alt="" className="dogDisplay-img" />
-          <Button
-            to={{ pathname: `/search/${id}` }}
-            text={`Learn about ${name}`}
-          />
-        </div>
-        <img src={pawIcon} alt="paw icon" className="dogDisplay-paw-icon" />
       </article>
     </>
   );
