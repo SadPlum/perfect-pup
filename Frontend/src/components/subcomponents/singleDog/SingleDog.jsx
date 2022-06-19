@@ -4,15 +4,15 @@ import { ReactComponent as LeftArrow } from "../../../icons/arrow-left-solid.svg
 import Button from "../Button/Button";
 
 function SingleDog({
-  key,
   name,
   sex,
   id,
   breed,
   age,
-  temperament,
-  img,
-  handleClick,
+
+  description,
+  image,
+
   vaccinations,
 }) {
   const dogRef = useRef(null);
@@ -29,9 +29,9 @@ function SingleDog({
       <section className="singleDog-main">
         <div className="singleDog-img-box">
           <img
-            src={img}
+            src={image}
             className="singleDog-img"
-            alt={`Image of ${name} the ${breed}`}
+            alt={` ${name} the ${breed}`}
           />
         </div>
         <div className="singleDog-main-text">
@@ -64,6 +64,7 @@ function SingleDog({
       <section className="singleDog-details">
         <div className="singleDog-content">
           <article className="singleDog-description-box">
+            <p className="singleDog-description">{description}</p>
             <p className="singleDog-description">
               {" "}
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum
@@ -71,8 +72,6 @@ function SingleDog({
               atque nesciunt quo. Assumenda quia doloremque nisi maiores natus
               inventore vero voluptate sapiente facere expedita officia ea
               nostrum labore quas molestiae, illum, libero perspiciatis aut.
-              Pariatur harum minus saepe voluptates id sequi, distinctio velit
-              sint rerum perspiciatis, dignissimos perferendis quos magnam.
             </p>
             <p className="singleDog-description">
               {" "}
@@ -81,8 +80,6 @@ function SingleDog({
               atque nesciunt quo. Assumenda quia doloremque nisi maiores natus
               inventore vero voluptate sapiente facere expedita officia ea
               nostrum labore quas molestiae, illum, libero perspiciatis aut.
-              Pariatur harum minus saepe voluptates id sequi, distinctio velit
-              sint rerum perspiciatis, dignissimos perferendis quos magnam.
             </p>
           </article>
           <div>

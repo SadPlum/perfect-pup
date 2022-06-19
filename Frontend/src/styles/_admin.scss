@@ -1,0 +1,50 @@
+.admin {
+  margin-left: 15px;
+  margin-top: 25px;
+  .admin-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .admin-sub-title {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+  .admin-input {
+    line-height: 1.3rem;
+    margin-bottom: 5px;
+    font-size: 1.15rem;
+  }
+  .admin-button {
+    border: 1px solid black;
+    color: black;
+  }
+  .admin-image {
+    width: 500px;
+    display: inline;
+    margin: 20px;
+  }
+  .admin-button {
+    margin-right: 15px;
+    display: inline;
+  }
+  .form {
+    display: flex;
+    flex-direction: row;
+  }
+  .description-title {
+    display: block;
+  }
+  .empty {
+    border: 2px solid red;
+  }
+  .admin-warning {
+    display: inline;
+    font-weight: 600;
+    border-bottom: 2px solid red;
+  }
+  .disabled {
+    display: none;
+  }
+}

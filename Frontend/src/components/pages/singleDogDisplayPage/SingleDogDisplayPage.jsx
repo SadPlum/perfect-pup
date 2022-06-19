@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import SingleDog from "../../subcomponents/singleDog/SingleDog";
-import data from "../../../data/data.json";
+import { getDog } from "../../../functions/apiRequests";
 
 function SingleDogDisplay({ dogList }) {
   const { dogId } = useParams();
@@ -12,9 +12,10 @@ function SingleDogDisplay({ dogList }) {
     window.scrollTo(0, 0);
   }, []);
 
-  // load data based on url param
   useEffect(() => {
-    setDog(data[dogId]);
+    getDog(dogId).then((data) => {
+      setDog(data.dog);
+    });
   }, []);
 
   return (
@@ -24,14 +25,15 @@ function SingleDogDisplay({ dogList }) {
 
       {dog && (
         <SingleDog
-          key={dog.id}
+          key={dog._id}
           id={dog.id}
-          name={dog.dog.name}
-          sex={dog.dog.sex}
-          breed={dog.dog.breed}
-          age={dog.dog.age}
-          temperament={dog.dog.temperament}
-          img={dog.dog.img}
+          name={dog.name}
+          sex={dog.sex}
+          breed={dog.breed}
+          age={dog.age}
+          description={dog.description}
+          temperament={dog.temperament}
+          image={dog.image}
           vaccinations={dog.vaccinated}
         />
       )}

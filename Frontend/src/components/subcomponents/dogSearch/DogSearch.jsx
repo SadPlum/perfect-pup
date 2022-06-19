@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 
 import DogDisplay from "../dogDisplay/DogDisplay";
+import Filter from "../Filter/Filter";
 
 function DogSearch({ dogList }) {
   const [sexValue, setSexValue] = useState("");
   const [vaccinatedValue, setVaccinatedValue] = useState("");
+  const [sizeValue, setSizeValue] = useState("");
+  // set default dog list to API call from Search Page
   const [dogArr, setDogArr] = useState(dogList);
 
   // SETS FILTER TO SEARCH DOG BY SEX
@@ -15,26 +18,31 @@ function DogSearch({ dogList }) {
   const handleChangeVaccinated = (value) => {
     setVaccinatedValue(value);
   };
+  // SETS FILTER TO SEARCH DOG BY SIZE
+  const handleChangeSize = (value) => {
+    setSizeValue(value);
+  };
 
   // Filters
   useEffect(() => {
-    // If sex === both and vaccinations === either, reset
-    if (sexValue === "" && vaccinatedValue === "") setDogArr(dogList);
-    // Else, filter accordingly
-    else {
-      let tempDogList = dogList;
-      if (sexValue !== "")
-        tempDogList = tempDogList.filter((dog) => dog.dog.sex === sexValue);
-      if (vaccinatedValue !== "")
-        vaccinatedValue === "yes"
-          ? (tempDogList = tempDogList.filter((dog) => dog.vaccinated === true))
-          : (tempDogList = tempDogList.filter(
-              (dog) => dog.vaccinated === false
-            ));
-
-      setDogArr(tempDogList);
+    let tempDogList = dogList;
+    if (sexValue !== "") {
+      tempDogList = tempDogList.filter(
+        (dog) => dog.sex.toString() === sexValue
+      );
     }
-  }, [sexValue, vaccinatedValue, dogList]);
+    if (vaccinatedValue !== "") {
+      tempDogList = tempDogList.filter(
+        (dog) => dog.vaccinated.toString() === vaccinatedValue
+      );
+    }
+    if (sizeValue !== "") {
+      tempDogList = tempDogList.filter(
+        (dog) => dog.size.toString() === sizeValue
+      );
+    }
+    setDogArr(tempDogList);
+  }, [sexValue, vaccinatedValue, sizeValue]);
 
   return (
     <>
@@ -42,54 +50,59 @@ function DogSearch({ dogList }) {
         <div className="dogSearch-head">
           <h2 className="dogSearch-title"> List of available dogs</h2>
           <section className="searchBars">
-            <div className="searchOption">
-              <label className="label">Sex:</label>
-              <select
-                className="select"
-                value={sexValue}
-                onChange={(e) => handleChangeSex(e.target.value)}
-              >
-                <option value="">Both</option>
-                <option value="M">Male</option>
-                <option value="F">Female</option>
-              </select>
-            </div>
-            <div className="searchOption searchOption-last">
-              <label className="label">Vaccinated:</label>
-              <select
-                className="select"
-                value={vaccinatedValue}
-                onChange={(e) => handleChangeVaccinated(e.target.value)}
-              >
-                <option value="">Either</option>
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-              </select>
-            </div>
+            <Filter
+              value={sexValue}
+              title="Sex"
+              handleChange={handleChangeSex}
+              valueOptionArray={[
+                ["", "Both"],
+                ["male", "Male"],
+                ["female", "Female"],
+              ]}
+            />
+            <Filter
+              value={vaccinatedValue}
+              title="Vaccinated"
+              handleChange={handleChangeVaccinated}
+              valueOptionArray={[
+                ["", "Either"],
+                ["true", "Yes"],
+                ["false", "No"],
+              ]}
+            />
+            <Filter
+              value={sizeValue}
+              title="Size"
+              handleChange={handleChangeSize}
+              valueOptionArray={[
+                ["", "Any"],
+                ["small", "Small"],
+                ["medium", "Medium"],
+                ["large", "Large"],
+              ]}
+              last={true}
+            />
           </section>
         </div>
         {/* 
 
         {/* IF DOG IS NOT ADOPTED, RETURN PROFILES */}
-
-        {dogArr.map((dog, i) => {
-          if (dog.adopted === false) {
-            return (
-              <div className="dogListings">
+        {dogArr &&
+          dogArr.map((dog) => {
+            if (dog.adopted === false) {
+              return (
                 <DogDisplay
-                  key={dog.id}
+                  key={dog._id}
                   id={dog.id}
-                  name={dog.dog.name}
-                  breed={dog.dog.breed}
-                  sex={dog.dog.sex}
-                  img={dog.dog.img}
-                  age={dog.dog.age}
-                  temperament={dog.dog.temperament}
+                  name={dog.name}
+                  breed={dog.breed}
+                  sex={dog.sex}
+                  image={dog.image}
+                  age={dog.age}
                 />
-              </div>
-            );
-          }
-        })}
+              );
+            }
+          })}
       </section>
     </>
   );

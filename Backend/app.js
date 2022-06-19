@@ -1,11 +1,17 @@
 const express = require('express');
 const dogRouter = require('./routers/dogRouter');
+const path = require('path');
+const { db } = require('./dogModel');
 
 const app = express();
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Middleware
 app.use((req, res, next) => {
-  console.log('Hello from the middleware 👋');
+  res.set('Access-Control-Allow-Origin', '*');
+  res.set('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.set('Access-Control-Allow-Headers', 'Content-Type');
   next();
 });
 

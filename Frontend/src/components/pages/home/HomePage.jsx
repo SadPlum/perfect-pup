@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Slider from "../../subcomponents/slider/Slider";
 
 import Button from "../../subcomponents/Button/Button";
