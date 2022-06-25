@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
-function TextInput({ identifier, label, setState, descriptionBox }) {
+function TextInput({
+  identifier,
+  label,
+  setState,
+  descriptionBox,
+  setReference,
+}) {
+  const ref = useRef(null);
+  useEffect(() => {
+    setReference(ref);
+  }, []);
   return (
     <div className="admin-input">
       {descriptionBox ? (
@@ -15,6 +25,7 @@ function TextInput({ identifier, label, setState, descriptionBox }) {
             cols="50"
             onChange={(e) => setState(e.target.value)}
             required
+            ref={ref}
           ></textarea>
         </div>
       ) : (
@@ -26,6 +37,7 @@ function TextInput({ identifier, label, setState, descriptionBox }) {
             name={identifier}
             onChange={(e) => setState(e.target.value.trim())}
             required
+            ref={ref}
           />
         </div>
       )}

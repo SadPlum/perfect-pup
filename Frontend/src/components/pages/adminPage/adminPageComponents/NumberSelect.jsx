@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 
-function NumberSelect({ identifier, label, setState }) {
+function NumberSelect({ identifier, label, setState, setReference }) {
+  const ref = useRef(null);
+  useEffect(() => {
+    setReference(ref);
+  }, []);
   return (
     <div className="admin-input">
       <label htmlFor={identifier}>{label}: </label>
@@ -13,6 +17,7 @@ function NumberSelect({ identifier, label, setState }) {
         onChange={(e) => setState(e.target.value)}
         required
         placeholder={identifier}
+        ref={ref}
       />
     </div>
   );
