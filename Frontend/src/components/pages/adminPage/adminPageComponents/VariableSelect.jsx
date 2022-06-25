@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
-function VariableSelect({ label, identifier, variables, setState }) {
+function VariableSelect({
+  label,
+  identifier,
+  variables,
+  setState,
+  setReference,
+}) {
+  const ref = useRef(null);
+  useEffect(() => {
+    setReference(ref);
+  }, []);
   return (
     <div className="select-bar admin-input">
       <label htmlFor={label}>{identifier}: </label>
@@ -8,8 +18,10 @@ function VariableSelect({ label, identifier, variables, setState }) {
         name={label}
         id={label}
         onChange={(e) => setState(e.target.value)}
+        ref={ref}
+        defaultValue=""
       >
-        <option value="" disabled selected>
+        <option value="" disabled={true}>
           select
         </option>
         {variables.map((variable) => (

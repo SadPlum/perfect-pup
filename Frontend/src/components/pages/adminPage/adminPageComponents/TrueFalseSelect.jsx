@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
-function TrueFalseSelect({ identifier, label, setState }) {
+function TrueFalseSelect({ identifier, label, setState, setReference }) {
+  const ref = useRef(null);
+  useEffect(() => {
+    setReference(ref);
+  }, []);
   return (
     <div className="select-bar admin-input">
       <label htmlFor={label}>{identifier}: </label>
@@ -8,8 +12,10 @@ function TrueFalseSelect({ identifier, label, setState }) {
         name={label}
         id={label}
         onChange={(e) => setState(e.target.value)}
+        ref={ref}
+        defaultValue=""
       >
-        <option value="" disabled selected>
+        <option value="" disabled>
           select
         </option>
         <option value={false}>No</option>
