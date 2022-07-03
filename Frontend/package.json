@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "homepage": "https://sadplum.github.io/perfect-pup/",
   "private": true,
+  "jest": {},
   "dependencies": {
     "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.8.1",
@@ -11,7 +12,6 @@
     "@mui/styles": "^5.4.2",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",
-    "@testing-library/user-event": "^13.5.0",
     "classnames": "^2.3.1",
     "mui": "^0.0.1",
     "react": "^17.0.2",
@@ -27,7 +27,7 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -53,6 +53,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "gh-pages": "^3.2.3"
+    "@babel/core": "^7.18.5",
+    "@babel/plugin-syntax-jsx": "^7.17.12",
+    "@babel/preset-react": "^7.17.12",
+    "@testing-library/dom": "^8.14.0",
+    "@testing-library/user-event": "^14.2.1",
+    "babel-jest": "^28.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "gh-pages": "^3.2.3",
+    "jest": "^28.1.1"
   }
 }

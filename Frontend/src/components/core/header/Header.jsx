@@ -1,13 +1,13 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import IconButton from "@mui/material/IconButton";
 import Dropdown from "./headerComponents/dropdown/Dropdown";
 
-const Header = () => {
-  let location = useLocation();
+const Header = ({ path }) => {
   // location for tab highlight
-  const [page, setPage] = useState(location);
+  const [page, setPage] = useState(null);
+
   // dropdown and handleClick for dropdown on smaller screens
   const [dropDown, setDropDown] = useState(false);
   const handleClick = () => {
@@ -26,6 +26,10 @@ const Header = () => {
   }, [page]);
 
   const tags = [`Home`, `Search`, `About`, `Tips`, `Contact`];
+
+  useEffect(() => {
+    console.log(path);
+  }, []);
 
   return (
     <header className="header">
@@ -52,9 +56,7 @@ const Header = () => {
           <div className="tab">
             <div
               className={
-                location.pathname === "/home" ||
-                location.pathname === "/perfect-pup" ||
-                location.pathname === "/"
+                path === "/home" || path === "/perfect-pup" || path === "/"
                   ? "tab-active"
                   : ""
               }
@@ -65,35 +67,29 @@ const Header = () => {
             </div>
           </div>
           <div className="tab">
-            {/* Trim pathname down to /search if on specific dog page */}
-            <div
-              className={
-                location.pathname.slice(0, 7) === "/search" ? "tab-active" : ""
-              }
-            >
+            {/* Trim path down to /search if on specific dog page */}
+            <div className={path === "/search" ? "tab-active" : ""}>
               <Link to="/search" className="nav-link">
                 Search
               </Link>
             </div>
           </div>
           <div className="tab">
-            <div className={location.pathname === "/about" ? "tab-active" : ""}>
+            <div className={path === "/about" ? "tab-active" : ""}>
               <Link to="/about" className="nav-link">
                 About
               </Link>
             </div>
           </div>
           <div className="tab">
-            <div className={location.pathname === "/tips" ? "tab-active" : ""}>
+            <div className={path === "/tips" ? "tab-active" : ""}>
               <Link to="/tips" className="nav-link">
                 Tips
               </Link>
             </div>
           </div>
           <div className="tab">
-            <div
-              className={location.pathname === "/contact" ? "tab-active" : ""}
-            >
+            <div className={path === "/contact" ? "tab-active" : ""}>
               <Link to="/contact" className="nav-link">
                 Contact
               </Link>
