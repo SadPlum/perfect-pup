@@ -8,7 +8,7 @@ function SearchPage() {
   const [dogData, setDogData] = useState(null);
 
   useEffect(() => {
-    getAllDogs().then((data) => setDogData(data.dogs));
+    getAllDogs().then((data) => setDogData(data));
   }, []);
 
   return (
@@ -16,7 +16,7 @@ function SearchPage() {
       {!dogData && (
         <div className="searchPage-loading">
           {" "}
-          <h3 className="searchPage-title"> Searching for pups </h3>
+          <h3 className="searchPage-title">Searching for pups</h3>
           <img src={pawIcon} alt="paw icon" className="searchPage-paw-icon" />
         </div>
       )}

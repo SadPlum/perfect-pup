@@ -74,11 +74,12 @@
 
   .tab {
     margin-left: 25px;
-
+    padding: 10px 15px;
+    border-radius: 20px;
     text-align: center;
+    color: $light-color;
   }
   .nav-link {
-    color: $light-color;
   }
 
   .tab-active {

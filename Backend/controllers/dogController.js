@@ -34,7 +34,7 @@ exports.getAllDogs = async (req, res) => {
     res.status(200).json({
       status: 'success',
       length: dogs.length,
-      data: { dogs },
+      data: dogs,
     });
   } catch (err) {
     res.status(404).json({
@@ -55,7 +55,7 @@ exports.getDog = async (req, res) => {
     let dog = dogData[0];
     res.status(200).json({
       status: 'success',
-      data: { dog },
+      data: dog,
     });
   } catch (err) {
     res.status(404).json({

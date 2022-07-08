@@ -27,10 +27,6 @@ const Header = ({ path }) => {
 
   const tags = [`Home`, `Search`, `About`, `Tips`, `Contact`];
 
-  useEffect(() => {
-    console.log(path);
-  }, []);
-
   return (
     <header className="header">
       <summary className="title-box">
@@ -74,13 +70,11 @@ const Header = ({ path }) => {
               </Link>
             </div>
           </div>
-          <div className="tab">
-            <div className={path === "/about" ? "tab-active" : ""}>
-              <Link to="/about" className="nav-link">
-                About
-              </Link>
+          <Link to="/about" data-testid="aboutNavButton" className="nav-link">
+            <div className="tab">
+              <div className={path === "/about" ? "tab-active" : ""}>About</div>
             </div>
-          </div>
+          </Link>
           <div className="tab">
             <div className={path === "/tips" ? "tab-active" : ""}>
               <Link to="/tips" className="nav-link">
