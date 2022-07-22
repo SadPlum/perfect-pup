@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import Header from "./components/core/header/Header";
 import HomePage from "./components/pages/home/HomePage";
 import AboutPage from "./components/pages/about/AboutPage";
@@ -21,11 +21,10 @@ function App() {
   }, [location]);
 
   return (
-    <div className="container">
+    <div className="container" data-testid="app">
       <Header path={path} />
       <div className="wrap">
         <Routes>
-          <Route path="/" element={<HomePage />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/search" element={<SearchPage />} />
           <Route path="/search/:dogId" element={<SingleDogDisplayPage />} />
@@ -34,8 +33,8 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/admin" element={<AdminPage />} />
           <Route path="/admin/create" element={<AdminCreate />} />
-          {/* <Route path="/admin/update" element={<AdminUpdate />} /> */}
-          <Route path="/*" element={<HomePage />} />
+          <Route path="/admin/update" element={<AdminUpdate />} />
+          <Route path="/*" element={<Navigate replace to="/home" />} />
         </Routes>
       </div>
       <Footer />

@@ -1,15 +1,50 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import AdminHeader from "./AdminHeader";
 import AdminForm from "./AdminForm";
-import { checkFormForEmpty } from "../adminPageFunctions/checkForm";
-// import { getAllDogs } from "@functions/apiRequests";
-
+import { checkFormForEmpty } from "../adminPageFunctions/checkFormForEmpty";
+import { getAllDogs } from "../../../../functions/apiRequests";
 import AdminDogList from "./AdminDogList";
+import { patchDog } from "../../../../functions/apiRequests";
+// import { formActionUpdate } from "../adminPageFunctions/formActionUpdate";
 
 function AdminUpdate() {
-  //
+  // dog to be on form
   const [dog, setDog] = useState(null);
+  // dogList to be available in the "Select a dog" AdminDogList componenet
+  const [dogList, setDogList] = useState(null);
+
+  // fetches all dogs
+  useEffect(() => {
+    getAllDogs().then((data) => setDogList(data));
+  }, []);
+
+  // Once dog is selected within the AdminDogList component, set values based on that dog
+  useEffect(() => {
+    if (dog) {
+      // Set values on states
+      setAdopted(dog.adopted);
+      setWaiting(dog.waiting);
+      setVaccinated(dog.vaccinated);
+      setName(dog.name);
+      setAge(dog.age);
+      setBreed(dog.breed);
+      setSex(dog.sex);
+      setSize(dog.size);
+      setDescription(dog.description);
+      // Sets Values on refs
+      adoptedRef.current.value = dog.adopted;
+      waitingRef.current.value = dog.waiting;
+      vaccinatedRef.current.value = dog.vaccinated;
+      nameRef.current.value = dog.name;
+      ageRef.current.value = dog.age;
+      breedRef.current.value = dog.breed;
+      sexRef.current.value = dog.sex;
+      sizeRef.current.value = dog.size;
+      descriptionRef.current.value = dog.description;
+      setOldImageUrl(dog.image);
+    }
+  }, [dog]);
 
   // Values for form
   const [adopted, setAdopted] = useState(null);
@@ -35,6 +70,9 @@ function AdminUpdate() {
   const [descriptionRef, setDescriptionRef] = useState(null);
   const [imageRef, setImageRef] = useState(null);
 
+  // url for old images
+  const [oldImageUrl, setOldImageUrl] = useState(null);
+
   // reference to display checkFormForEmpty message
   const [messageRef, setMessageRef] = useState(null);
 
@@ -58,12 +96,12 @@ function AdminUpdate() {
           ageRef,
           sizeRef,
           descriptionRef,
-          imageRef,
         ],
         messageRef
       ) === true
     )
       return;
+
     // Object must not be nested
     let dogFormObject = {
       adopted: adopted,
@@ -75,19 +113,21 @@ function AdminUpdate() {
       sex: sex,
       size: size,
       description: description,
-      image: image,
+      // image: image,
     };
 
-    // postNewDog(dogFormObject);
+    patchDog(dogFormObject, dog._id);
+
     navigate("/admin", { replace: true });
   };
 
   return (
     <div className="admin">
       <AdminHeader />
-      <AdminDogList setDog={setDog} />
+      {dogList && <AdminDogList dogList={dogList} setDog={setDog} />}
+
       <AdminForm
-        type="create"
+        type="update"
         setAdopted={setAdopted}
         setWaiting={setWaiting}
         setVaccinated={setVaccinated}
@@ -97,7 +137,6 @@ function AdminUpdate() {
         setSex={setSex}
         setSize={setSize}
         setDescription={setDescription}
-        setImage={setImage}
         image={image}
         formAction={formAction}
         setAdoptedRef={setAdoptedRef}
@@ -109,8 +148,7 @@ function AdminUpdate() {
         setSexRef={setSexRef}
         setSizeRef={setSizeRef}
         setDescriptionRef={setDescriptionRef}
-        setImageRef={setImageRef}
-        setMessageRef={setMessageRef}
+        oldImageUrl={oldImageUrl}
       />
     </div>
   );

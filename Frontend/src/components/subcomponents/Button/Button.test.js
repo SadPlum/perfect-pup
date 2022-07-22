@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import App from "../../../App";
 import Button from "./Button";
@@ -12,7 +12,7 @@ test("should render", () => {
       <Button to="" text="test" />
     </BrowserRouter>
   );
-  const button = screen.getByRole("button", { name: "test" });
+  const button = screen.getByTestId("btn", { name: "test" });
   expect(button).toBeInTheDocument();
 });
 

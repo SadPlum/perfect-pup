@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AdminHeader from "./AdminHeader";
 import AdminForm from "./AdminForm";
-import { checkFormForEmpty } from "../adminPageFunctions/checkForm";
+import { checkFormForEmpty } from "../adminPageFunctions/checkFormForEmpty";
 import { postNewDog } from "../../../../functions/apiRequests";
 
 function AdminCreate() {
