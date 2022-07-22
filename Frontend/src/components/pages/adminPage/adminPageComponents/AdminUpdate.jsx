@@ -68,7 +68,6 @@ function AdminUpdate() {
   const [ageRef, setAgeRef] = useState(null);
   const [sizeRef, setSizeRef] = useState(null);
   const [descriptionRef, setDescriptionRef] = useState(null);
-  const [imageRef, setImageRef] = useState(null);
 
   // url for old images
   const [oldImageUrl, setOldImageUrl] = useState(null);
