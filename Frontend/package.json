@@ -1,7 +1,6 @@
 {
   "name": "perfect-pup",
   "version": "0.1.0",
-  "homepage": "/home",
   "private": true,
   "jest": {},
   "dependencies": {
