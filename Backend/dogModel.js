@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const dogSchema = new mongoose.Schema(
   {
-    id: { type: Number, required: true },
+    id: { type: Number, required: true, unique: true },
     adopted: {
       type: Boolean,
       default: false,

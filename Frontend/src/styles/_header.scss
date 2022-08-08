@@ -72,19 +72,18 @@
     }
   }
 
-  .tab {
+  .tab-margin {
     margin-left: 25px;
-
+  }
+  .tab {
+    padding: 10px 15px;
+    border-radius: 20px;
     text-align: center;
-  }
-  .nav-link {
     color: $light-color;
+    text-transform: capitalize;
   }
-
   .tab-active {
     background-color: $dark-color-highlight;
-    padding: 10px 15px;
-    margin: 0 -15px;
     border-radius: 20px;
     font-weight: 500;
   }

@@ -8,6 +8,7 @@ function VariableSelect({
   setReference,
 }) {
   const ref = useRef(null);
+
   useEffect(() => {
     setReference(ref);
   }, []);

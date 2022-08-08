@@ -16,12 +16,9 @@ const Admin = () => {
             <Link to="/admin/create">
               <button className="admin-button">Create new Dog?</button>
             </Link>
-            <button
-              className="admin-button"
-              onClick={() => setAction("update")}
-            >
-              Update dog?
-            </button>
+            <Link to="/admin/update">
+              <button className="admin-button">Update dog</button>
+            </Link>
           </div>
         )}
       </main>

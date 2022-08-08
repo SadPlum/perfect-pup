@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 function Button({ to, text }) {
   return (
-    <button className="btn">
-      <Link to={to}>{text}</Link>
-    </button>
+    <Link className="btn" data-testid="btn" to={to}>
+      {text}
+    </Link>
   );
 }
 

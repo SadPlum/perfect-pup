@@ -14,7 +14,7 @@ function SingleDogDisplay({ dogList }) {
 
   useEffect(() => {
     getDog(dogId).then((data) => {
-      setDog(data.dog);
+      setDog(data);
     });
   }, []);
 
