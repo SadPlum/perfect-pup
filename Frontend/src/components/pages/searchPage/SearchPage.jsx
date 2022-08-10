@@ -16,7 +16,9 @@ function SearchPage() {
       {!dogData && (
         <div className="searchPage-loading">
           {" "}
-          <h3 className="searchPage-title">Searching for pups</h3>
+          <h3 className="searchPage-title">
+            Server is being configured. Please return at another date
+          </h3>
           <img src={pawIcon} alt="paw icon" className="searchPage-paw-icon" />
         </div>
       )}
