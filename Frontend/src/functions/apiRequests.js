@@ -1,4 +1,4 @@
-const url = "http://54.83.149.207:3004/api/v1/dogs/";
+const url = "https://54.83.149.207:443/api/v1/dogs/";
 
 export const getAllDogs = async () => {
   try {
