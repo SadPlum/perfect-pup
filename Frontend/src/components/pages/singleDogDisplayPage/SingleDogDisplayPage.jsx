@@ -6,7 +6,7 @@ import { getDog } from "../../../functions/apiRequests";
 function SingleDogDisplay({ dogList }) {
   const { dogId } = useParams();
   const [dog, setDog] = useState(null);
-
+  const [dogImage, setDogImage] = useState(null);
   // sends user to top of page
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -17,6 +17,16 @@ function SingleDogDisplay({ dogList }) {
       setDog(data);
     });
   }, []);
+
+  useEffect(() => {
+    if (dog) {
+      const imageIndex = dog.image.indexOf("/dogImages");
+      const imageUrl =
+        "https://ec2-18-205-188-36.compute-1.amazonaws.com/" +
+        dog.image.slice(imageIndex);
+      setDogImage(imageUrl);
+    }
+  }, [dog]);
 
   return (
     <div>
@@ -33,7 +43,7 @@ function SingleDogDisplay({ dogList }) {
           age={dog.age}
           description={dog.description}
           temperament={dog.temperament}
-          image={dog.image}
+          image={dogImage}
           vaccinations={dog.vaccinated}
         />
       )}
