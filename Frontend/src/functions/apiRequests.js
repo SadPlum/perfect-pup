@@ -1,4 +1,4 @@
-const url = "perfectpup.xyz/api/v1/dogs/";
+const url = "http://perfectpup.xyz/api/v1/dogs/";
 
 export const getAllDogs = async () => {
   try {
