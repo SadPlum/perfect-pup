@@ -1,4 +1,4 @@
-const url = "https://ec2-18-205-188-36.compute-1.amazonaws.com/api/v1/dogs/";
+const url = "perfectpup.xyz/api/v1/dogs/";
 
 export const getAllDogs = async () => {
   try {

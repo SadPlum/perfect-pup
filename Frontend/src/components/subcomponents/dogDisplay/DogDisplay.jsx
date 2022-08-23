@@ -6,9 +6,7 @@ import Button from "../Button/Button";
 
 function DogDisplay({ id, name, sex, breed, age, temperament, image }) {
   const imageIndex = image.indexOf("/dogImages");
-  const imageUrl =
-    "https://ec2-18-205-188-36.compute-1.amazonaws.com/" +
-    image.slice(imageIndex);
+  const imageUrl = "perfectpup.xyz/" + image.slice(imageIndex);
 
   return (
     <>
