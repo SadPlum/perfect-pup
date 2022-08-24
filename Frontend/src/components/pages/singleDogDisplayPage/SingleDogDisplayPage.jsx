@@ -21,7 +21,7 @@ function SingleDogDisplay({ dogList }) {
   useEffect(() => {
     if (dog) {
       const imageIndex = dog.image.indexOf("/dogImages");
-      const imageUrl = "http://perfectpup.xyz/" + dog.image.slice(imageIndex);
+      const imageUrl = "https://perfectpup.xyz/" + dog.image.slice(imageIndex);
       setDogImage(imageUrl);
     }
   }, [dog]);
