@@ -1,0 +1,91 @@
+import { render, screen } from "@testing-library/react";
+import App from "../../../App";
+import { BrowserRouter } from "react-router-dom";
+import userEvent from "@testing-library/user-event";
+import "@testing-library/jest-dom";
+import { createMemoryHistory } from "history";
+
+describe("test tab functionality", () => {
+  test("Check if tabs change to  about page", async () => {
+    const user = userEvent.setup();
+    const history = createMemoryHistory();
+    render(
+      <BrowserRouter location={history.location} navigator={history}>
+        <App />
+      </BrowserRouter>
+    );
+    const header = screen.getByRole("heading", {
+      name: "Find your new best friend",
+    });
+    const aboutTab = screen.getByTestId("aboutNavButton");
+    const homepage = screen.getByRole("heading", {
+      name: "Welcome, dog-lovers",
+    });
+    await user.click(aboutTab);
+    const aboutPage = screen.getByRole("heading", { name: "Who we are" });
+    expect(header).toBeInTheDocument();
+    expect(aboutTab).toBeInTheDocument();
+    expect(aboutPage).toBeInTheDocument();
+    expect(homepage).not.toBeInTheDocument();
+  });
+
+  test('from about page to contact page', async () => {
+    const aboutPage = screen.getByRole("heading", { name: "Who we are" });
+    expect(aboutPage).toBeInTheDocument();
+  })
+});
+
+describe("front page to contact", () => {
+  beforeEach(() => {
+    document.body.innerHTML = "";
+  });
+  test("Check if tabs change to contact page", async () => {
+    const user = userEvent.setup();
+    const history = createMemoryHistory();
+    render(
+      <BrowserRouter location={history.location} navigator={history}>
+        <App />
+      </BrowserRouter>
+    );
+    const header = screen.getByRole("heading", {
+      name: "Find your new best friend",
+    });
+    const contactTab = screen.getByTestId("contactNavButton");
+    const homepage = screen.getByRole("heading", {
+      name: "Welcome, dog-lovers",
+    });
+    await user.click(contactTab);
+    const contactPage = screen.getByRole("heading", {
+      name: "How to reach us",
+    });
+    expect(header).toBeInTheDocument();
+    expect(contactTab).toBeInTheDocument();
+    expect(contactPage).toBeInTheDocument();
+    expect(homepage).not.toBeInTheDocument();
+  });
+});
+
+test("Check if tabs change to tips page", async () => {
+  const user = userEvent.setup();
+  const history = createMemoryHistory();
+  render(
+    <BrowserRouter location={history.location} navigator={history}>
+      <App />
+    </BrowserRouter>
+  );
+  const header = screen.getByRole("heading", {
+    name: "Find your new best friend",
+  });
+  const tipsTab = screen.getByTestId("tipsNavButton");
+  const homepage = screen.getByRole("heading", {
+    name: "Welcome, dog-lovers",
+  });
+  await user.click(tipsTab);
+  const tipsPage = screen.getByRole("heading", {
+    name: "Is this your first time adopting a dog?",
+  });
+  expect(header).toBeInTheDocument();
+  expect(tipsTab).toBeInTheDocument();
+  expect(tipsPage).toBeInTheDocument();
+  expect(homepage).not.toBeInTheDocument();
+});

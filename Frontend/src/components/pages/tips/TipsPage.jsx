@@ -31,7 +31,7 @@ function TipsPage() {
       </div>
       <div className="tips-section">
         {tipsArr.map((tip, i) => {
-          return <Tips tip={tip} index={i} />;
+          return <Tips tip={tip} index={i} key={i} />;
         })}
       </div>
       <p className="tips-credits">

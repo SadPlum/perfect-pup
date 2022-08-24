@@ -34,7 +34,7 @@ exports.getAllDogs = async (req, res) => {
     res.status(200).json({
       status: 'success',
       length: dogs.length,
-      data: { dogs },
+      data: dogs,
     });
   } catch (err) {
     res.status(404).json({
@@ -55,7 +55,7 @@ exports.getDog = async (req, res) => {
     let dog = dogData[0];
     res.status(200).json({
       status: 'success',
-      data: { dog },
+      data: dog,
     });
   } catch (err) {
     res.status(404).json({
@@ -89,10 +89,29 @@ exports.createDog = async (req, res) => {
     const newDog = await Dog.create(req.body);
     res.status(201).json({
       status: 'success',
-      data: { dog: newDog },
+      data: newDog,
     });
   } catch (err) {
     res.status(400).json({
+      status: 'fail',
+      message: err,
+    });
+  }
+};
+
+// PATCH dog by id
+exports.updateDogById = async (req, res) => {
+  const query = { _id: req.params._id };
+  try {
+    await Dog.updateOne(query, req.body);
+    const dog = await Dog.findOne(query);
+    console.log(dog);
+    res.status(200).json({
+      status: 'success',
+      message: res,
+    });
+  } catch (err) {
+    res.status(500).json({
       status: 'fail',
       message: err,
     });

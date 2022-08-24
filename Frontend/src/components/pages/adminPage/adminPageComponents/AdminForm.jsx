@@ -30,10 +30,13 @@ function AdminForm({
   setDescriptionRef,
   setImageRef,
   setMessageRef,
+  oldImageUrl,
 }) {
   const messageRef = useRef(null);
   useEffect(() => {
-    setMessageRef(messageRef);
+    if (type === "create") {
+      setMessageRef(messageRef);
+    }
   }, []);
 
   return (
@@ -107,12 +110,14 @@ function AdminForm({
                 descriptionBox={true}
                 setReference={setDescriptionRef}
               />
-              <ImageInput
-                identifier="image"
-                label="image"
-                setState={setImage}
-                setReference={setImageRef}
-              />
+              {setImage && (
+                <ImageInput
+                  identifier="image"
+                  label="image"
+                  setState={setImage}
+                  setReference={setImageRef}
+                />
+              )}
             </div>
 
             <button className="admin-button" onClick={formAction}>
@@ -124,12 +129,17 @@ function AdminForm({
           </form>
         </div>
         <div className="form-right">
+          {/* only display image if new image loaded up */}
           {image && (
             <img
               className="admin-image"
               src={URL.createObjectURL(image)}
               alt="dog"
             />
+          )}
+          {/* only display old image if new image not loaded up */}
+          {!image && (
+            <img className="admin-image" src={oldImageUrl} alt="dog" />
           )}
         </div>
       </div>

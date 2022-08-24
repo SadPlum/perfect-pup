@@ -15,7 +15,7 @@ function TrueFalseSelect({ identifier, label, setState, setReference }) {
         ref={ref}
         defaultValue=""
       >
-        <option value="" disabled>
+        <option value="" disabled={true} selected>
           select
         </option>
         <option value={false}>No</option>

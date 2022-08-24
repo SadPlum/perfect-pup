@@ -3,7 +3,7 @@ import pawIcon from "../../../../icons/paw.png";
 
 function Tips({ tip, index }) {
   return (
-    <article className="tip">
+    <article data-testid="tips" className="tip">
       <div className="tip-mobile">
         {index === 0 && (
           <img

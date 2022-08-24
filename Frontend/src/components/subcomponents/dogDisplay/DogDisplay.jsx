@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import pawIcon from "../../../icons/paw.png";
 
 import Button from "../Button/Button";
 
 function DogDisplay({ id, name, sex, breed, age, temperament, image }) {
+  const imageIndex = image.indexOf("/dogImages");
+  const imageUrl = "https://perfectpup.xyz/" + image.slice(imageIndex);
+
   return (
     <>
       <article className=" dogListings">
@@ -13,7 +16,7 @@ function DogDisplay({ id, name, sex, breed, age, temperament, image }) {
             <h3 className="dogDisplay-title">{`${name}, ${sex}`}</h3>
           </div>
           <div className="dogDisplay-content">
-            <img src={image} alt="" className="dogDisplay-img" />
+            <img src={imageUrl} alt="" className="dogDisplay-img" />
             <Button
               to={{ pathname: `/search/${id}` }}
               text={`Learn about ${name}`}

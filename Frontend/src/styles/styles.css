@@ -198,19 +198,20 @@ a {
   }
 }
 
-.header .tab {
+.header .tab-margin {
   margin-left: 25px;
-  text-align: center;
 }
 
-.header .nav-link {
+.header .tab {
+  padding: 10px 15px;
+  border-radius: 20px;
+  text-align: center;
   color: #f0ecec;
+  text-transform: capitalize;
 }
 
 .header .tab-active {
   background-color: #963876;
-  padding: 10px 15px;
-  margin: 0 -15px;
   border-radius: 20px;
   font-weight: 500;
 }
