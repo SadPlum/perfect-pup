@@ -17,6 +17,9 @@ function SearchPage() {
         <div className="searchPage-loading">
           {" "}
           <h3 className="searchPage-title">Searching for pups</h3>
+          <h4 className="searchPage-title">
+            Reconfiguring server and DNS for Digital Ocean
+          </h4>
           <img src={pawIcon} alt="paw icon" className="searchPage-paw-icon" />
         </div>
       )}
